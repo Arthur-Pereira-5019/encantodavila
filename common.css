@@ -1,0 +1,15 @@
+#img_display {
+    display: none;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+}
+
+*:not(.noto) {
+    font-family: "Poppins", "Arial";
+}
+
+.noto {
+    font-family: "Noto Serif", "Times New Roman";
+}
