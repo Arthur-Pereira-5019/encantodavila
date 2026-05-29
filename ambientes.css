@@ -51,13 +51,20 @@
 
 .amb_card_d {
     color: rgb(85, 85, 85);
-}
+    max-height: 8vh;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;}
 
 #amb_slide {
     display: flex;
     gap: 2vw;
     width: calc((17vw * 5) + (2vw * 4));
     position: relative;
-    transition: left 200ms;
+    transition: left 120ms;
+    left: 0vw
 }
 
