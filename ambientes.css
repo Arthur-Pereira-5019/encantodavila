@@ -1,0 +1,63 @@
+#ambients_ut {
+    padding-top: 9vh;
+    padding-bottom: 8vh;
+    color: rgb(85, 85, 85);
+    display: flex;
+    text-align: justify
+}
+
+#ambients_ut_r {
+    flex: 8;
+    flex-shrink: 7
+}
+
+#ambients_ut_l {
+    font-size: 32px;
+    flex: 4;
+    flex-shrink: 1;
+    min-width: 0;
+    min-height: fit-content;
+    max-height: calc(fit-content) +2vh;
+    color: rgb(42, 42, 42);
+}
+
+#ambients {
+    background-color: rgb(249, 238, 240);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#ambients_container {
+    width: 70%;
+    padding-bottom: 8vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#ambients_cards {
+    overflow: hidden;
+    
+}
+
+.amb_card {
+    width: 17vw;
+}
+
+.amb_card_i {
+    height: 38vh;
+    object-fit: cover;
+}
+
+.amb_card_d {
+    color: rgb(85, 85, 85);
+}
+
+#amb_slide {
+    display: flex;
+    gap: 2vw;
+    width: calc((17vw * 5) + (2vw * 4));
+    position: relative;
+    transition: left 200ms;
+}
+

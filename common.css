@@ -13,3 +13,10 @@
 .noto {
     font-family: "Noto Serif", "Times New Roman";
 }
+
+.unselectable {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
