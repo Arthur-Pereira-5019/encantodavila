@@ -3,8 +3,46 @@
     background-color: black;
     width: 100vw;
     height: 100vh;
-    z-index: 2;
+    z-index: 3;
+    position: fixed;
 }
+
+.img_display_b {
+  position: absolute;
+  top:50vh;
+  z-index: 1;
+  transform: translateY(-50%);
+  width: 4vh;
+  scale: 1/1;
+  cursor: pointer;
+}
+
+#img_display_img {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  aspect-ratio: 16/9;
+  width: 80vw;
+}
+
+#img_count {
+  position: absolute;
+  top:1vh;
+  left: 1vw;
+  color: white
+}
+
+#img_display_rb {
+  right: 0vw;
+  opacity: 1;
+}
+
+#img_display_lb {
+  left: 0vw;
+  opacity: 1;
+}
+
 
 *:not(.noto) {
     font-family: "Poppins", "Arial";
