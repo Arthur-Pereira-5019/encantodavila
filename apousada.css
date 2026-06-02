@@ -43,6 +43,10 @@
     height: 100%;
 }
 
+.pousada_img:hover {
+    transform: scale(1.5)
+}
+
 #h_apousada {
     font-size: 46px !important;
 }
@@ -50,4 +54,25 @@
 #text_side > p {
     font-size: 16px;
     color: rgb(56, 56, 56)
+}
+
+.pf_cover {
+    position:absolute;
+    z-index: 2;
+    background-color: black;
+    opacity: 0;
+    transition: opacity 500ms;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    cursor: pointer;
+    border-radius: 1rem;
+}
+
+.pousada_frame {
+    position: relative;
+}
+
+.pf_cover:hover {
+    opacity: 0.27;
 }

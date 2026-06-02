@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="ambientes.css">
+    <link rel="stylesheet" href="acomodacoes.css">
     <div id="img_display">
         <img id="img_display_lb">
         <img id="img_display_rb">
@@ -53,7 +54,13 @@
     </div>
     <div id="main">
         <div id="home" class="section">
-            <img src="assets/front_1.webp" id="home_bg">
+            <img src="assets/left_arrow.png" id="home_bg_lb" class="home_bg_b">
+            <img src="assets/right_arrow.png" id="home_bg_rb" class="home_bg_b">
+            <div id="home_slider">
+                <img src="assets/front_1.webp" class="home_bg">
+                <img src="assets/front_2.webp" class="home_bg">
+                <img src="assets/front_3.webp" class="home_bg">
+            </div>
         </div>
         <div id="pousada" class="section">
             <div id="inner_box">
@@ -79,13 +86,21 @@
                     </p>
                 </div>
                 <div id="image_side">
-                    <div class="img_line" id="img_line1">
-                        <img src="assets/front_2.webp" class="pousada_img">
-                        <img src="assets/back1.webp" class="pousada_img">
+                    <div class="img_line img-group img-group-1" data-img_group="0">
+                        <div class="pousada_frame expandable" data-img_group_order="0">
+                            <img src="assets/front_2.webp" class="pousada_img">
+                        </div>
+                        <div class="pousada_frame expandable" data-img_group_order="1">
+                            <img src="assets/back1.webp" class="pousada_img">
+                        </div>
                     </div>
                     <div class="img_line" id="img_line2">
-                        <img src="assets/inside_1.webp" class="pousada_img">
-                        <img src="assets/inside_2.webp" class="pousada_img">
+                        <div class="pousada_frame expandable" data-img_group_order="2">
+                            <img src="assets/inside_1.webp" class="pousada_img">
+                        </div>
+                        <div class="pousada_frame expandable" data-img_group_order="3">
+                            <img src="assets/inside_2.webp" class="pousada_img">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -138,7 +153,56 @@
 
         </div>
         <div id="acomodacoes" class="section">
+            <div id="acomodacoes_ut">
+                <p>Nossas acomodações</p>
+                <p>Os quartos da Pousada Encanto da Vila são projetados para proporcionar conforto e praticidade. Todos vêm com ar-condicionado, TV de tela plana, banheiro privativo, e ambiente preparado para famílias ou grupos</p>
+            </div>
+            <div id="acomodacoes_card_slide">
+                <div class=""></div>
+            </div>
+            <div id="comodidades">
+                <div id="comodidade_slider">
+                    <div class="comodidade" id="comodidade_1"">
+                        <img src="" class="comodidade_i">
+                        <p class="comodidade_d">Estacionamento rotativo</p>
+                    </div>
+                    <div class="comodidade" id="comodidade_2">
+                        <img src="" class="comodidade_i">
+                        <p class="comodidade_d">Ar condicionado</p>
+                    </div>
+                    <div class="comodidade" id="comodidade_3">
+                        <img src="" class="comodidade_i">
+                        <p class="comodidade_d">Wi-Fi</p>
+                    </div>
+                    <div class="comodidade" id="comodidade_4">
+                        <img src="" class="comodidade_i">
+                        <p class="comodidade_d">Frigobar</p>
+                    </div>
+                    <div class="comodidade" id="comodidade_5">
+                        <img src="" class="comodidade_i">
+                        <p class="comodidade_d">Varanda</p>
+                    </div>
+                    <div class="comodidade" id="comodidade_6">
+                        <img src="" class="comodidade_i">
+                        <p class="comodidade_d">Área de Jogos</p>
+                    </div>
+                    <div class="comodidade" id="comodidade_7">
+                        <img src="" class="comodidade_i">
+                        <p class="comodidade_d">Secador de cabelos</p>
+                    </div>
+                    <div class="comodidade" id="comodidade_8">
+                        <img src="" class="comodidade_i">
+                        <p class="comodidade_d">Café da manhã</p>
+                    </div>
+                </div>
+                <div id="comodidades_bs"> 
+                    <div class="comodidades_lb">
+                    </div>
+                    <div class="comodidades_rb">
 
+                    </div>
+                </div>
+            </div>
         </div>
         <div id="gastronomia" class="section">
 
