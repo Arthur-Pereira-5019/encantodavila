@@ -49,6 +49,7 @@ img {
     height: 6.5vh;
     bottom: 4vh;
     left: 4vh;
+    z-index: 3;
 }
 
 

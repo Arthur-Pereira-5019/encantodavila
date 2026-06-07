@@ -2,8 +2,8 @@
     display: flex;
     justify-content: center;
     gap:4rem;
-    align-items: center;
-    width: 80vw;
+    align-items: flex-start;
+    width: 75vw;
 }
 
 #inner_box > div {
@@ -21,7 +21,7 @@
 
 #image_side {
     display: flex;
-    gap: 2vh;
+    gap: 1vh;
     flex-direction: column;
 }
 
@@ -34,7 +34,7 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    gap: 2vh
+    gap: 1vh
 }
 
 .pousada_img {
@@ -75,4 +75,28 @@
 
 .pf_cover:hover {
     opacity: 0.27;
+}
+
+#localizacao {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f6f0f1;
+}
+
+#h_localizacao {
+    font-size: 36px !important;
+}
+
+#loc_text_side {
+    font-size: 16px;
+    color: rgb(56, 56, 56);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.loc_frame {
+    position: relative;
 }

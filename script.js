@@ -6,6 +6,7 @@ ambient_rb = document.querySelector("#ambient_rb")
 ambient_lb = document.querySelector("#ambient_lb")
 a_logo = document.querySelector("#a_logo")
 p_frames = document.querySelectorAll(".pousada_frame")
+loc_frames = document.querySelectorAll(".loc_frame")
 home_slider = document.querySelector("#home_slider")
 home_bg_lb = document.querySelector("#home_bg_lb")
 home_bg_rb = document.querySelector("#home_bg_rb")
@@ -13,11 +14,14 @@ img_display = document.querySelector("#img_display")
 img_display_img = document.querySelector("#img_display_img")
 img_display_lb = document.querySelector("#img_display_lb")
 img_display_rb = document.querySelector("#img_display_rb")
+img_display_close = document.querySelector("#img_display_close")
 img_count = document.querySelector("#img_count")
 returnHeight = 0
 
 //Common
-
+img_display_close.addEventListener("click", function() {
+    closeExpandedImage()
+})
 
 function expandImage(group, start) {
     img_display.style.display = "block"
@@ -152,6 +156,15 @@ p_frames.forEach(e => {
     })
 });
 
+loc_frames.forEach(e => {
+    cover = document.createElement("div")
+    cover.classList.add("pf_cover")
+    e.appendChild(cover)
+    e.addEventListener("click", function () {
+        expandImage(2, Number(e.querySelector(".pousada_img").dataset.img_group_order))
+    })
+});
+
 // Whatsapp
 whatsb = document.querySelector("#whats")
 whatsb.addEventListener('click', function (event) {
@@ -170,17 +183,22 @@ window.addEventListener("scroll", function (event) {
 })
 
 let isDragging = false;
-let offsetX, offsetY;
+let lastX;
 
 amb_slide.addEventListener('pointerdown', (e) => {
     isDragging = true;
-    offsetX = e.clientX - amb_slide.offsetLeft;
+    lastX = e.clientX;
 });
 
 document.addEventListener('pointermove', (e) => {
     if (!isDragging) return;
-    amb_slide.style.left = `${e.clientX - offsetX}px`;
+    const dx = e.clientX - lastX;
+    lastX = e.clientX;
+
+    const currentLeft = parseFloat(amb_slide.style.left) || 0;
+    amb_slide.style.left = `${currentLeft + dx}px`;
 });
+
 
 document.addEventListener('pointerup', () => {
     if (isDragging) {
