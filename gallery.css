@@ -1,0 +1,22 @@
+#galeria {
+    width: 80vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+#gallery {
+    position: relative;
+    left: 50%;
+    transform: translateX(-40%);
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+    flex-wrap: wrap;
+    justify-content: start;
+    min-width: 800px;
+}
+
+#gallery_see {
+    cursor: pointer;
+}

@@ -8,8 +8,14 @@ a_logo = document.querySelector("#a_logo")
 p_frames = document.querySelectorAll(".pousada_frame")
 loc_frames = document.querySelectorAll(".loc_frame")
 home_slider = document.querySelector("#home_slider")
+gastronomia_slider = document.querySelector("#gastronomia_slider")
+event_slider = document.querySelector("#event_slider")
 home_bg_lb = document.querySelector("#home_bg_lb")
 home_bg_rb = document.querySelector("#home_bg_rb")
+gastronomia_im_rb = document.querySelector("#gastronomia_im_rb")
+gastronomia_im_lb = document.querySelector("#gastronomia_im_lb")
+event_im_rb = document.querySelector("#event_im_rb")
+event_im_lb = document.querySelector("#event_im_lb")
 img_display = document.querySelector("#img_display")
 img_display_img = document.querySelector("#img_display_img")
 img_display_lb = document.querySelector("#img_display_lb")
@@ -19,7 +25,7 @@ img_count = document.querySelector("#img_count")
 returnHeight = 0
 
 //Common
-img_display_close.addEventListener("click", function() {
+img_display_close.addEventListener("click", function () {
     closeExpandedImage()
 })
 
@@ -38,10 +44,10 @@ function closeExpandedImage() {
 }
 
 document.addEventListener('keydown', (event) => {
-  if ((event.code == "Escape") && img_display.style.display == "block") {
-    event.preventDefault();
-    closeExpandedImage()
-  }
+    if ((event.code == "Escape") && img_display.style.display == "block") {
+        event.preventDefault();
+        closeExpandedImage()
+    }
 });
 
 
@@ -80,6 +86,7 @@ function switchImage(group, cap, r) {
 }
 
 function imageWithinGroup(group, n) {
+    console.log(n)
     g = document.querySelector(".img-group-" + group)
     i = g.querySelector('[data-img_group_order="' + n + '"]')
     img_display.dataset.currently = String(n)
@@ -112,14 +119,66 @@ home_bg_rb.addEventListener("click", () => {
     switchhomebg(false)
 })
 
+gastronomia_im_rb.addEventListener("click", () => {
+    switchgastronomiabg(false)
+})
+
+gastronomia_im_lb.addEventListener("click", () => {
+    switchgastronomiabg(true)
+})
+
+event_im_rb.addEventListener("click", () => {
+    switcheventbg(false)
+})
+
+event_im_lb.addEventListener("click", () => {
+    switcheventbg(true)
+})
+
 
 let homebgswitchid
 function startHBGSwitch() {
     homebgswitchid = setTimeout(() => {
         switchhomebg(false)
+        switchgastronomiabg(false)
+        switcheventbg(false)
+        clearTimeout(homebgswitchid)
+        startHBGSwitch()
     }, 9000);
 }
 startHBGSwitch()
+
+function switchgastronomiabg(l) {
+    r = gastronomia_slider.style.right
+    r = Number(r.slice(0, r.length - 1))
+    if (l == false) {
+        if (r < 100) {
+            gastronomia_slider.style.right = (r + 100) + "%"
+        } else {
+            gastronomia_slider.style.right = "0%"
+        }
+    } else {
+        if (r > 0) {
+            gastronomia_slider.style.right = (r - 100) + "%"
+        }
+    }
+}
+
+function switcheventbg(l) {
+    r = event_slider.style.right
+    r = Number(r.slice(0, r.length - 1))
+    if (l == false) {
+        if (r < 100) {
+            event_slider.style.right = (r + 100) + "%"
+        } else {
+            event_slider.style.right = "0%"
+        }
+    } else {
+        if (r > 0) {
+            event_slider.style.right = (r - 100) + "%"
+        }
+    }
+}
 
 function switchhomebg(l) {
     r = home_slider.style.right
@@ -135,8 +194,22 @@ function switchhomebg(l) {
             home_slider.style.right = (r - 100) + "%"
         }
     }
-    clearTimeout(homebgswitchid)
-    startHBGSwitch()
+}
+
+function switcheventobg(l) {
+    r = home_slider.style.right
+    r = Number(r.slice(0, r.length - 1))
+    if (l == false) {
+        if (r < 200) {
+            home_slider.style.right = (r + 100) + "%"
+        } else {
+            home_slider.style.right = "0%"
+        }
+    } else {
+        if (r > 0) {
+            home_slider.style.right = (r - 100) + "%"
+        }
+    }
 }
 
 function get_homebg_slide() {

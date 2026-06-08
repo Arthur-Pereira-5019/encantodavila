@@ -25,6 +25,8 @@
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="ambientes.css">
     <link rel="stylesheet" href="acomodacoes.css">
+    <link rel="stylesheet" href="gas_even.css">
+    <link rel="stylesheet" href="gallery.css">
     <div id="img_display">
         <img id="img_display_lb" class="img_display_b" src="assets/left_arrow.png">
         <img id="img_display_rb" class="img_display_b" src="assets/right_arrow.png">
@@ -69,7 +71,7 @@
         </div>
         <div id="pousada" class="section">
             <div id="inner_box">
-                <div id="text_side">
+                <div id="text_side" class="default_text_side">
                     <p id="h_apousada" class="noto"> Pousada Encanto da Vila </p>
                     <p>A Pousada Encanto da Vila está localizada na Rua Itapiranga, 211, no bairro Velha, em Blumenau.
                         Sua localização estratégica permite fácil acesso ao centro histórico da cidade e possibilita
@@ -245,7 +247,7 @@
         </div>
         <div id="localizacao" class="section">
             <div id="inner_box">
-                <div id="loc_text_side">
+                <div id="loc_text_side" class="default_text_side">
                     <p id="h_localizacao" class="noto"> Localização privilegiada </p>
                     <p>A proximidade da Pousada Encanto da Vila com a Vila Germânica é um dos grandes diferenciais para
                         quem visita Blumenau. Localizada a poucos minutos de caminhada do complexo, a pousada oferece
@@ -285,9 +287,9 @@
             <p id="st_im_text" class="noto">Onde a tranquilidade encontra a tradição de Blumenau</p>
             <div id="actual_st_im"></div>
         </div>
-        <div id="gastronomia" class="section">
-            <div id="inner_box">
-                <div id="loc_text_side">
+        <div id="gastronomia" class="section gas_even">
+            <div id="gastronomia_inner_box">
+                <div id="loc_text_side" class="default_text_side">
                     <p id="h_localizacao" class="noto"> Gastronomia </p>
                     <p>A Pousada Encanto da Vila oferece um café da manhã estilo americano incluído na diária, com
                         frutas frescas e pastelaria fresca ideal para começar o dia antes de explorar Blumenau.</p>
@@ -299,21 +301,45 @@
                         da manhã + boa localização com restaurantes próximos garante praticidade gastronômica aos
                         hóspedes.</p>
                 </div>
-                <div id="image_side">
+                <div class="gas_even_img_side">
                     <img src="assets/left_arrow.png" id="gastronomia_im_lb" class="gastronomia_im_b">
                     <img src="assets/right_arrow.png" id="gastronomia_im_rb" class="gastronomia_im_b">
-                    <div id="home_slider">
+                    <div class="gas_even_slider" id="gastronomia_slider">
                         <img src="assets/food.webp" class="gastronomia_pic">
                         <img src="assets/food_2.webp" class="gastronomia_pic">
                     </div>
                 </div>
             </div>
         </div>
-        <div id="eventos" class="section">
-
+        <div id="eventos" class="section gas_even">
+            <div id="gastronomia_inner_box">
+                <div class="gas_even_img_side">
+                    <img src="assets/left_arrow.png" id="event_im_lb" class="gastronomia_im_b">
+                    <img src="assets/right_arrow.png" id="event_im_rb" class="gastronomia_im_b">
+                    <div class="gas_even_slider" id="event_slider">
+                        <img src="assets/vila_germanica.webp" class="gastronomia_pic">
+                        <img src="assets/mesas_2.webp" class="gastronomia_pic">
+                    </div>
+                </div>
+                <div id="loc_text_side" class="default_text_side">
+                    <p id="h_localizacao" class="noto"> Realize seu Evento </p>
+                    <p>Localização privilegiada da pousada, especialmente pela proximidade com o Parque Vila Germânica e
+                        o centro de Blumenau, faz dela uma opção interessante para quem deseja organizar eventos como
+                        pequenas celebrações, encontros familiares ou até casamentos íntimos. A estrutura com quartos
+                        confortáveis, estacionamento e ambiente acolhedor pode atender bem a convidados.</p>
+                    <p>Além disso, o ambiente interno e externo, com áreas de jardim e espaços aconchegantes, oferece um
+                        cenário simpático para eventos mais reservados.</p>
+                </div>
+            </div>
         </div>
         <div id="galeria" class="section">
-
+            <p class="noto center">Nossas Fotos</p>
+            <p class="center">Na página da pousada e em sites de reservas é possível encontrar uma galeria de fotos que
+                exibe a fachada do imóvel, os quartos, os banheiros, áreas comuns como jardim, e até detalhes como
+                mobiliário, camas e decoração</p>
+            <div id="gallery" class="img-group-3" data-img_group_cap="32">
+            </div>
+            <p id="gallery_see" class="center">Ver mais</p>
         </div>
         <div id="contatos" class="section">
 
@@ -331,6 +357,12 @@
 
     <img src="assets/whatsapp.png" class="follow2 dbutton" id="whats">
 </body>
+<div class="img_line img-group ref" id="ref_1"></div>
+<div class="gallery_frame expandable ref" id="ref_2">
+    <img src="assets/vila_germanica.webp" class="pousada_img" data-img_group_order="0">
+</div>
 <script src="script.js"></script>
+<script src="gallery.js"></script>
+
 
 </html>

@@ -64,6 +64,9 @@ html {
   text-align: center;
 }
 
+.default_text_side {
+  text-align: justify;
+}
 
 *:not(.noto) {
     font-family: "Poppins", "Arial";
@@ -122,4 +125,8 @@ html {
   text-align: center;
   z-index: 2;
   width: 100%;
+}
+
+.ref {
+  display: none;
 }

@@ -43,9 +43,6 @@
     height: 100%;
 }
 
-.pousada_img:hover {
-    transform: scale(1.5)
-}
 
 #h_apousada {
     font-size: 46px !important;
