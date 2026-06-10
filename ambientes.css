@@ -64,9 +64,8 @@
     display: flex;
     gap: 2vw;
     width: calc((17vw * 5) + (2vw * 4));
-    position: relative;
     transition: left 120ms;
-    left: 0vw
+    left: 0vw;
 }
 
 

@@ -37,26 +37,44 @@
     <div id="header" data-transparent="1" class="follow1">
         <div id="left_tabs" class="header_side">
             <button class="button_h"
-                onclick="document.getElementById('home').scrollIntoView({behavior: 'smooth'});">Home</button>
+                onclick="document.getElementById('home').scrollIntoView({behavior: 'smooth'});">Home
+                <div id="hom_underline" class="header_underline" data-active_underline="0">
+            </button>
             <button class="button_h"
-                onclick="document.getElementById('pousada').scrollIntoView({behavior: 'smooth'});">A pousada</button>
+                onclick="document.getElementById('pousada').scrollIntoView({behavior: 'smooth'});">A pousada
+                <div id="pou_underline" class="header_underline" data-active_underline="0">
+            </button>
             <button class="button_h"
-                onclick="document.getElementById('ambients').scrollIntoView({behavior: 'smooth'});">Ambientes</button>
+                onclick="document.getElementById('ambients').scrollIntoView({behavior: 'smooth'});">Ambientes
+                <div id="amb_underline" class="header_underline" data-active_underline="0">
+            </button>
             <button class="button_h"
-                onclick="document.getElementById('acomodacoes').scrollIntoView({behavior: 'smooth'});">Acomodações</button>
+                onclick="document.getElementById('acomodacoes').scrollIntoView({behavior: 'smooth'});">Acomodações
+                <div id="aco_underline" class="header_underline" data-active_underline="0">
+
+            </button>
         </div>
         <div id="logo">
             <img src="assets/logo.svg" id="a_logo">
         </div>
         <div id="right_tabs" class="header_side">
             <button class="button_h"
-                onclick="document.getElementById('gastronomia').scrollIntoView({behavior: 'smooth'});">Gastronomia</button>
+                onclick="document.getElementById('gastronomia').scrollIntoView({behavior: 'smooth'});">Gastronomia
+                <div id="gas_underline" class="header_underline" data-active_underline="0">
+            </button>
             <button class="button_h"
-                onclick="document.getElementById('eventos').scrollIntoView({behavior: 'smooth'});">Eventos</button>
+                onclick="document.getElementById('eventos').scrollIntoView({behavior: 'smooth'});">Eventos
+                <div id="eve_underline" class="header_underline" data-active_underline="0">
+            </button>
             <button class="button_h"
-                onclick="document.getElementById('galeria').scrollIntoView({behavior: 'smooth'});">Galeria</button>
+                onclick="document.getElementById('galeria').scrollIntoView({behavior: 'smooth'});">Galeria
+                <div id="gal_underline" class="header_underline" data-active_underline="0">
+            </button>
             <button class="button_h"
-                onclick="document.getElementById('contatos').scrollIntoView({behavior: 'smooth'});">Contato</button>
+                onclick="document.getElementById('contatos').scrollIntoView({behavior: 'smooth'});">Contato
+                <div id="con_underline" class="header_underline" data-active_underline="0">
+
+            </button>
         </div>
     </div>
     <div id="main">
@@ -126,7 +144,7 @@
                     </div>
                 </div>
                 <div id="ambients_cards">
-                    <div id="amb_slide">
+                    <div id="amb_slide" class="slide">
                         <div class="amb_card">
                             <p class="amb_card_n">Atendimento</p>
                             <img class="amb_card_i" src="assets/welcome.webp" draggable="false"></img>
@@ -333,13 +351,13 @@
             </div>
         </div>
         <div id="galeria" class="section">
-            <p class="noto center">Nossas Fotos</p>
+            <p id="galeria_h" class="noto center">Nossas Fotos</p>
             <p class="center">Na página da pousada e em sites de reservas é possível encontrar uma galeria de fotos que
                 exibe a fachada do imóvel, os quartos, os banheiros, áreas comuns como jardim, e até detalhes como
                 mobiliário, camas e decoração</p>
             <div id="gallery" class="img-group-3" data-img_group_cap="32">
             </div>
-            <p id="gallery_see" class="center">Ver mais</p>
+            <p id="gallery_see" class="center noto">Ver mais</p>
         </div>
         <div id="contatos" class="section">
 

@@ -130,3 +130,8 @@ html {
 .ref {
   display: none;
 }
+
+.slider {
+  position: relative;
+  touch-action: none;
+}

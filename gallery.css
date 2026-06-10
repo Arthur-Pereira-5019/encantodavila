@@ -1,13 +1,14 @@
 #galeria {
-    width: 80vw;
-    margin-left: 10vw;
-    margin-right: 10vw;
+    display: flex;
+    flex-direction: column;
+    background-color: #f6f0f1;
+    align-items: center;
 }
 
 #gallery {
     position: relative;
     left: 50%;
-    transform: translateX(-40%);
+    transform: translateX(-50%);
     align-self: center;
     display: flex;
     flex-direction: row;
@@ -15,8 +16,25 @@
     flex-wrap: wrap;
     justify-content: start;
     min-width: 800px;
+    width: 80vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 2vh;
 }
 
 #gallery_see {
     cursor: pointer;
+    margin-bottom: 8vh;
+    font-weight: 500;
+}
+
+#galeria_h {
+    font-size: 34px;
+    font-weight: 400;
+    margin-top: 8vh;
+    margin-bottom: 3vh;
+}
+
+#galeria p {
+    width: 70vw;
 }
