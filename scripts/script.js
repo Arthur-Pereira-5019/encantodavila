@@ -1,6 +1,5 @@
 // Definitions
 body = document.querySelector("body")
-header = document.querySelector("#header")
 amb_slide = document.querySelector("#amb_slide")
 ambient_rb = document.querySelector("#ambient_rb")
 ambient_lb = document.querySelector("#ambient_lb")
@@ -192,6 +191,8 @@ function switchhomebg(l) {
     } else {
         if (r > 0) {
             home_slider.style.right = (r - 100) + "%"
+        } else {
+            home_slider.style.right = "200%"
         }
     }
 }
@@ -245,15 +246,7 @@ whatsb.addEventListener('click', function (event) {
 })
 
 // Header
-window.addEventListener("scroll", function (event) {
-    if (window.scrollY > 100) {
-        header.dataset.transparent = "0"
-        a_logo.src = "assets/logo_dark.svg"
-    } else {
-        header.dataset.transparent = "1"
-        a_logo.src = "assets/logo.svg"
-    }
-})
+
 
 let isDragging = false;
 let lastX;

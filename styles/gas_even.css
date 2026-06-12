@@ -1,20 +1,36 @@
-.gas_even {
-    width: 100%;
-    min-height: fit-content;
-    padding-top: 15vh;
-    padding-bottom: 15vh;
-}
-
-#gastronomia {
-    background-color: #f6f0f1;
-}
-
-#gastronomia_inner_box {
+.gas_even_iner_box {
     margin-left: 15vw;
     margin-right: 15vw;
     width: 70vw;
     display: flex;
-    gap:2vw
+    flex-direction: column;
+    gap:2vw;
+}
+
+#eventos_inner_box {
+    flex-direction: column-reverse;
+}
+
+@media (min-width: 800px) {
+    .gas_even_iner_box {
+        flex-direction: row;
+    }
+
+    #eventos_inner_box {
+        flex-direction: row;
+    }
+}
+
+.gas_even {
+    max-width: 100%;
+    overflow-x: hidden;
+    min-height: fit-content;
+    padding-top: 15vh;
+    padding-bottom: 15vh;}
+
+
+#gastronomia {
+    background-color: #f6f0f1;
 }
 
 .gastronomia_im_b {
@@ -26,7 +42,7 @@
     cursor: pointer;
 }
 
-#gastronomia_inner_box > div{
+.gas_even_iner_box > div{
     flex: 1;
     min-width: 200px;
 }
@@ -52,6 +68,10 @@
     position: relative;
 }
 
+.gas_even_cards {
+    overflow: hidden;
+}
+
 .gas_even_slider {
     height: 100%;
     display: flex;
@@ -65,5 +85,6 @@
 .gastronomia_pic {
     width: 50%;
     aspect-ratio: 16/9;
+    max-height: 70vh;
     object-fit: cover;
 }

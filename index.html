@@ -18,15 +18,16 @@
 </head>
 
 <body>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="apousada.css">
-    <link rel="stylesheet" href="common.css">
-    <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="ambientes.css">
-    <link rel="stylesheet" href="acomodacoes.css">
-    <link rel="stylesheet" href="gas_even.css">
-    <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/apousada.css">
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/ambientes.css">
+    <link rel="stylesheet" href="styles/acomodacoes.css">
+    <link rel="stylesheet" href="styles/gas_even.css">
+    <link rel="stylesheet" href="styles/gallery.css">
+    <link rel="stylesheet" href="styles/footer.css">
     <div id="img_display">
         <img id="img_display_lb" class="img_display_b" src="assets/left_arrow.png">
         <img id="img_display_rb" class="img_display_b" src="assets/right_arrow.png">
@@ -38,7 +39,7 @@
         <div id="left_tabs" class="header_side">
             <button class="button_h"
                 onclick="document.getElementById('home').scrollIntoView({behavior: 'smooth'});">Home
-                <div id="hom_underline" class="header_underline" data-active_underline="0">
+                <div id="hom_underline" class="header_underline" data-active_underline="1">
             </button>
             <button class="button_h"
                 onclick="document.getElementById('pousada').scrollIntoView({behavior: 'smooth'});">A pousada
@@ -73,8 +74,12 @@
             <button class="button_h"
                 onclick="document.getElementById('contatos').scrollIntoView({behavior: 'smooth'});">Contato
                 <div id="con_underline" class="header_underline" data-active_underline="0">
-
             </button>
+        </div>
+    </div>
+    <div id="mobile_header">
+        <div id="mobile_logo">
+            <img src="assets/logo_dark.svg" id="mobile_a_logo">
         </div>
     </div>
     <div id="main">
@@ -144,7 +149,7 @@
                     </div>
                 </div>
                 <div id="ambients_cards">
-                    <div id="amb_slide" class="slide">
+                    <div id="amb_slide" class="slider">
                         <div class="amb_card">
                             <p class="amb_card_n">Atendimento</p>
                             <img class="amb_card_i" src="assets/welcome.webp" draggable="false"></img>
@@ -306,7 +311,7 @@
             <div id="actual_st_im"></div>
         </div>
         <div id="gastronomia" class="section gas_even">
-            <div id="gastronomia_inner_box">
+            <div id="gastronomia_inner_box" class="gas_even_iner_box">
                 <div id="loc_text_side" class="default_text_side">
                     <p id="h_localizacao" class="noto"> Gastronomia </p>
                     <p>A Pousada Encanto da Vila oferece um café da manhã estilo americano incluído na diária, com
@@ -330,7 +335,7 @@
             </div>
         </div>
         <div id="eventos" class="section gas_even">
-            <div id="gastronomia_inner_box">
+            <div id="eventos_inner_box" class="gas_even_iner_box">
                 <div class="gas_even_img_side">
                     <img src="assets/left_arrow.png" id="event_im_lb" class="gastronomia_im_b">
                     <img src="assets/right_arrow.png" id="event_im_rb" class="gastronomia_im_b">
@@ -369,7 +374,25 @@
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div id="footer">
-
+            <div><img src="assets/logo.svg"></div>
+            <div></div>
+            <div>
+                <p class="noto">Menu</p>
+                <br>
+                <p>Home</p>
+                <p>A Pousada</p>
+                <p>Ambientes</p>
+                <p>Acomodações</p>
+                <p>Gastronomia</p>
+                <p>Eventos</p>
+            </div>
+            <div>
+                <p class="noto">Contatos</p>
+                <p>047 920008202</p>
+                <p>encantodavilapousada@gmail.com</p>
+                <p>R. Itapiranga, 211 - Velha, Blumenau - SC CEP: 89036-230</p>
+            </div>
+            
         </div>
     </div>
 
@@ -377,10 +400,11 @@
 </body>
 <div class="img_line img-group ref" id="ref_1"></div>
 <div class="gallery_frame expandable ref" id="ref_2">
-    <img src="assets/vila_germanica.webp" class="pousada_img" data-img_group_order="0">
+    <img src="assets/vila_germanica.webp" class="gallery_img" data-img_group_order="0">
 </div>
-<script src="script.js"></script>
-<script src="gallery.js"></script>
+<script src="scripts/gallery.js"></script>
+<script src="scripts/header.js"></script>
+<script src="scripts/script.js"></script>
 
 
 </html>

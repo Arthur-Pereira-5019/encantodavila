@@ -15,11 +15,29 @@
     gap: 1vw;
     flex-wrap: wrap;
     justify-content: start;
-    min-width: 800px;
-    width: 80vw;
+    min-width: 200px;
+    width: 96vw;
     margin-left: 10vw;
     margin-right: 10vw;
     margin-top: 2vh;
+}
+
+
+.gallery_img {
+    border-radius: 1rem;
+    width: 11rem;
+    height: 100%;
+}
+
+@media (min-width: 800px) {
+    #gallery {
+        min-width: 700px;
+        width: 80vw;
+    }
+    
+    .gallery_img {
+        width: 24rem;
+    }
 }
 
 #gallery_see {
