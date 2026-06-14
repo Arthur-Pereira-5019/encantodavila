@@ -2,6 +2,7 @@
 body = document.querySelector("body")
 amb_slide = document.querySelector("#amb_slide")
 ambient_rb = document.querySelector("#ambient_rb")
+ambient_cards = document.querySelector("#ambients_cards")
 ambient_lb = document.querySelector("#ambient_lb")
 a_logo = document.querySelector("#a_logo")
 p_frames = document.querySelectorAll(".pousada_frame")
@@ -271,13 +272,16 @@ gap = 0
 base_px = ""
 base_vw_n = 0
 max_v2 = 0
+slider_vw = 0
 
 function rclc_prop() {
-    gap_px = window.getComputedStyle(document.querySelector("#amb_slide")).gap
+    gap_px = window.getComputedStyle(amb_slide).gap
     base_px = window.getComputedStyle(document.querySelector(".amb_card")).width
+    slide_px = window.getComputedStyle(ambient_cards).width
+    slider_vw = pxToVw(Number(slide_px.slice(0,slide_px.length-2)))
     gap = Math.ceil(pxToVw(Number(gap_px.slice(0,gap_px.length-2))))
     base_vw_n = Math.ceil(pxToVw(Number(base_px.slice(0,base_px.length-2)))+gap)
-    max_vw = base_vw_n*-2
+    max_vw = base_vw_n*-(5-Math.floor(slider_vw/base_vw_n))
 }
 
 amb_slide.addEventListener('pointerdown', (e) => {
@@ -318,7 +322,7 @@ ambient_rb.addEventListener("click", () => {
     rclc_prop()
     if (!isDragging) {
         l = get_amb_slide_vw()
-        if (l >= -base_vw_n) {
+        if (l > max_vw) {
             amb_slide.style.left = `${l - base_vw_n}vw`
         }
     }
@@ -327,7 +331,7 @@ ambient_rb.addEventListener("click", () => {
 ambient_lb.addEventListener("click", () => {
     if (!isDragging) {
         l = get_amb_slide_vw()
-        if (l <= -base_vw_n) {
+        if (l < 0) {
             amb_slide.style.left = `${(Number(l) + base_vw_n)}vw`
         }
     }
