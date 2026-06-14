@@ -10,14 +10,18 @@ con_underline = document.querySelector("#con_underline")
 
 window.addEventListener("scroll", function (event) {
     y = window.scrollY
-    hom_underline.dataset.active_underline="0"
-    pou_underline.dataset.active_underline="0"
-    amb_underline.dataset.active_underline="0"
-    aco_underline.dataset.active_underline="0"
-    gas_underline.dataset.active_underline="0"
-    eve_underline.dataset.active_underline="0"
-    gal_underline.dataset.active_underline="0"
-    con_underline.dataset.active_underline="0"
+    hom_underline.dataset.active_underline = "0"
+    pou_underline.dataset.active_underline = "0"
+    amb_underline.dataset.active_underline = "0"
+    aco_underline.dataset.active_underline = "0"
+    gas_underline.dataset.active_underline = "0"
+    eve_underline.dataset.active_underline = "0"
+    gal_underline.dataset.active_underline = "0"
+    con_underline.dataset.active_underline = "0"
+    if (isMobile) {
+        home_bg_lb.style.opacity = 0
+        home_bg_rb.style.opacity = 0
+    }
     if (y > 100) {
         header.dataset.transparent = "0"
         a_logo.src = "assets/logo_dark.svg"
@@ -25,11 +29,17 @@ window.addEventListener("scroll", function (event) {
         header.dataset.transparent = "1"
         a_logo.src = "assets/logo.svg"
     }
-    if(y < 700) {
-        hom_underline.dataset.active_underline="1"
-    } else if(y < 1680) {
-        pou_underline.dataset.active_underline="1"
-    } else if(y < 2520) {
-        amb_underline.dataset.active_underline="1"
+    if (y < 700) {
+        if (y < 150) {
+            if (isMobile) {
+                home_bg_lb.style.opacity = 1
+                home_bg_rb.style.opacity = 1
+            }
+        }
+        hom_underline.dataset.active_underline = "1"
+    } else if (y < 1680) {
+        pou_underline.dataset.active_underline = "1"
+    } else if (y < 2520) {
+        amb_underline.dataset.active_underline = "1"
     }
 })

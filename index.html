@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="styles/gas_even.css">
     <link rel="stylesheet" href="styles/gallery.css">
     <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/comentarios.css">
     <div id="img_display">
         <img id="img_display_lb" class="img_display_b" src="assets/left_arrow.png">
         <img id="img_display_rb" class="img_display_b" src="assets/right_arrow.png">
@@ -191,9 +192,9 @@
                     </div>
                 </div>
                 <div id="ambients_bs">
-                    <button id="ambient_lb">&lt;
+                    <button id="ambient_lb" class="ambient_b">&lt;
                     </button>
-                    <button id="ambient_rb">&gt;
+                    <button id="ambient_rb" class="ambient_b">&gt;
                     </button>
                 </div>
             </div>
@@ -367,6 +368,42 @@
         <div id="contatos" class="section">
 
         </div>
+        <div id="comentarios" class="section">
+            <p id="comentarios_h" class="noto center">O que dizem sobre nós</p>
+            <div id="comentarios_cards">
+                <div id="comentario_slider" class="slider">
+                    <div class="comentario" id="comentario1">
+                        <p class="comentario_txt">Adorei minha estadia! O lugar é exatamente como nas fotos — limpo,
+                            confortável e com tudo o que precisei. A localização é excelente, e a Gabryela e sua equipe
+                            foram super atenciosos e fáceis de conversar. A proximidade com a Vila Germânica é um grande
+                            diferencial dessa acomodação. Me senti em casa e com certeza voltaria a me hospedar aqui!
+                        </p>
+                        <p class="comentario_aut">ALESSANDRA FERREIRA - GOOGLE MAPS</p>
+                    </div>
+                    <div class="comentario" id="comentario2">
+                        <p class="comentario_txt">Ótima pousada. Atendeu bem nosso propósito que era ficar próximo da Vila Germânica. O atendimento da Gabi e de seu esposo foi excelente do começo ao fim. Nos aguardaram chegar pra mostrar a pousada pessoalmente e explicar os detalhes. 
+                        </p>
+                        <p class="comentario_aut">CAIO LUCAS - GOOGLE MAPS</p>
+                    </div>
+                    <div class="comentario" id="comentario3">
+                        <p class="comentario_txt">A pousada é maravilhosa!! O ambiente é acolhedor, limpo e organizado! O café da manhã é uma delícia, com muita opção, sem falar dos bolos que são uma delícia 😋
+                        </p>
+                        <p class="comentario_aut">JAQUELINE VAILATI - GOOGLE MAPS</p>
+                    </div>
+                    <div class="comentario" id="comentario4">
+                        <p class="comentario_txt">Maravilhosoooooo!!!!!<br>Ficamos em 4 pessoas em um quarto (1 cama casal e 2 solteiro) Quarto MEGA aconchegante e confortável (com luzes amarelas e baixas para conforto e uma mais forte para iluminar normal mesmo), disponibilizam toalhas, cobertores, travesseiros muito limpinhos e cheirosos, além de ar condicionado e uma smart TV.
+                        </p>
+                        <p class="comentario_aut">CAMILA ALVES - GOOGLE MAPS</p>
+                    </div>
+                </div>
+            </div>
+            <div id="comentarios_buttons">
+                <id="right_button">
+                    </id>
+                    <id="left_button">
+                        </id>
+            </div>
+        </div>
         <div id="map">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11581.479288073524!2d-49.09095826672188!3d-26.91516465233476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94df1980f9471e1b%3A0xa8054472df2c9d77!2sPousada%20Encanto%20da%20Vila!5e0!3m2!1spt-BR!2sbr!4v1780068807717!5m2!1spt-BR!2sbr"
@@ -374,25 +411,28 @@
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div id="footer">
-            <div><img src="assets/logo.svg"></div>
-            <div></div>
+            <div id="footer_logo"><img id="footer_a_logo" src="assets/logo.svg"></div>
             <div>
                 <p class="noto">Menu</p>
                 <br>
-                <p>Home</p>
-                <p>A Pousada</p>
-                <p>Ambientes</p>
-                <p>Acomodações</p>
-                <p>Gastronomia</p>
-                <p>Eventos</p>
+                <p onclick="document.getElementById('home').scrollIntoView({behavior: 'smooth'});">Home</p>
+                <p onclick="document.getElementById('pousada').scrollIntoView({behavior: 'smooth'});">A Pousada</p>
+                <p onclick="document.getElementById('ambients').scrollIntoView({behavior: 'smooth'});">Ambientes</p>
+                <p onclick="document.getElementById('acomodacoes').scrollIntoView({behavior: 'smooth'});">Acomodações
+                </p>
+                <p onclick="document.getElementById('gastronomia').scrollIntoView({behavior: 'smooth'});">Gastronomia
+                </p>
+                <p onclick="document.getElementById('eventos').scrollIntoView({behavior: 'smooth'});">Eventos</p>
             </div>
-            <div>
+            <div id="footer_contatos">
                 <p class="noto">Contatos</p>
-                <p>047 920008202</p>
-                <p>encantodavilapousada@gmail.com</p>
-                <p>R. Itapiranga, 211 - Velha, Blumenau - SC CEP: 89036-230</p>
+                <br>
+                <p id="footer_phone">047 920008202</p>
+                <p id="footer_mail">encantodavilapousada@gmail.com</p>
+                <p id="footer_location">R. Itapiranga, 211 - Velha, Blumenau -<br id="mobile_break"> SC CEP: 89036-230
+                </p>
             </div>
-            
+
         </div>
     </div>
 
@@ -405,6 +445,7 @@
 <script src="scripts/gallery.js"></script>
 <script src="scripts/header.js"></script>
 <script src="scripts/script.js"></script>
+<script src="scripts/footer.js"></script>
 
 
 </html>

@@ -57,20 +57,5 @@ img {
     height: 1vh;
 }
 
-#ambients_bs button {
-    width: 2vw;
-    height: 2vw;
-    background-color: transparent;
-    font-size: 100%;
-    border: 1px solid black;
-    border-radius: 0.4rem;
-    text-decoration: solid;
-    cursor: pointer;
-}
 
-#ambients_bs {
-    margin-top: 3vh;
-    display: flex;
-    gap: 1vw
-}
 

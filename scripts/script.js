@@ -23,6 +23,10 @@ img_display_close = document.querySelector("#img_display_close")
 img_count = document.querySelector("#img_count")
 returnHeight = 0
 
+const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+const isAndroid = /Android/.test(navigator.userAgent);
+    const isMobile = isIOS || isAndroid;
+
 //Common
 img_display_close.addEventListener("click", function () {
     closeExpandedImage()
@@ -250,11 +254,27 @@ whatsb.addEventListener('click', function (event) {
 
 let isDragging = false;
 let lastX;
+gap_px = ""
+gap = 0
+base_px = ""
+base_vw_n = 0
+max_v2 = 0
+
+function rclc_prop() {
+    gap_px = window.getComputedStyle(document.querySelector("#amb_slide")).gap
+    base_px = window.getComputedStyle(document.querySelector(".amb_card")).width
+    gap = Math.ceil(pxToVw(Number(gap_px.slice(0,gap_px.length-2))))
+    base_vw_n = Math.ceil(pxToVw(Number(base_px.slice(0,base_px.length-2)))+gap)
+    max_vw = base_vw_n*-2
+}
 
 amb_slide.addEventListener('pointerdown', (e) => {
+    rclc_prop()
     isDragging = true;
     lastX = e.clientX;
 });
+
+
 
 document.addEventListener('pointermove', (e) => {
     if (!isDragging) return;
@@ -266,29 +286,31 @@ document.addEventListener('pointermove', (e) => {
 });
 
 
+
 document.addEventListener('pointerup', () => {
     if (isDragging) {
         isDragging = false;
         let l = get_amb_slide()
         if (l > 0) {
             amb_slide.style.left = "0vw"
-        } else if (l < -38) {
-            amb_slide.style.left = "-38vw"
+        } else if (l < max_vw) {
+            amb_slide.style.left = max_vw+"vw"
         } else {
-            if (l % 19 <= -9.5) {
-                amb_slide.style.left = `${Math.floor(l / 19) * 19}vw`
+            if (l % (base_vw_n) <= base_vw_n/-2) {
+                amb_slide.style.left = `${Math.floor(l / base_vw_n) * base_vw_n}vw`
             } else {
-                amb_slide.style.left = `${Math.ceil(l / 19) * 19}vw`
+                amb_slide.style.left = `${Math.ceil(l / base_vw_n) * base_vw_n}vw`
             }
         }
     }
 });
 
 ambient_rb.addEventListener("click", () => {
+    rclc_prop()
     if (!isDragging) {
         l = get_amb_slide_vw()
-        if (l >= -19) {
-            amb_slide.style.left = `${l - 19}vw`
+        if (l >= -base_vw_n) {
+            amb_slide.style.left = `${l - base_vw_n}vw`
         }
     }
 })
@@ -296,8 +318,8 @@ ambient_rb.addEventListener("click", () => {
 ambient_lb.addEventListener("click", () => {
     if (!isDragging) {
         l = get_amb_slide_vw()
-        if (l <= -19) {
-            amb_slide.style.left = `${(Number(l) + 19)}vw`
+        if (l <= -base_vw_n) {
+            amb_slide.style.left = `${(Number(l) + base_vw_n)}vw`
         }
     }
 })

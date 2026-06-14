@@ -1,7 +1,30 @@
+.home_bg_b {
+  position: absolute;
+  top: 25vh;
+  z-index: 1;
+  transform: translateY(-50%);
+  width: 5vh;
+  scale: 1/1;
+  cursor: pointer;
+  transition: opacity 700ms;
+}
+
 #home {
   width: 100%;
-  height: 100vh;
+  height: 50vh;
   overflow: hidden;
+}
+
+@media (min-width: 800px) {
+  #home {
+    height: 100vh;
+  }
+
+  .home_bg_b {
+    top: 50vh;
+  width: 6vh;
+  }
+
 }
 
 .home_bg {
@@ -33,17 +56,6 @@
   right: 0%;
 }
 
-.home_bg_b {
-  position: absolute;
-  top:50vh;
-  z-index: 1;
-  transform: translateY(-50%);
-  width: 6vh;
-  scale: 1/1;
-  cursor: pointer;
-  transition: opacity 700ms;
-}
-
 .home_bg_b:hover {
   opacity: 1 !important;
 }
@@ -57,4 +69,3 @@
   left: 0.5vw;
   opacity: 1;
 }
-

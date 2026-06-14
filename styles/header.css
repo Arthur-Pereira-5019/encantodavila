@@ -23,6 +23,13 @@
     background-color: white;
 }
 
+#logo {
+    width: 8vw;
+    aspect-ratio: 1/1;
+    margin-top: 0.5%;
+    margin-bottom: 1%;
+}
+
 @media (min-width: 800px) {
     #header {
         width: 100%;
@@ -42,6 +49,13 @@
     .button_h {
         font-size: 16px;
         padding: 15px;
+    }
+
+    #logo {
+        width: 5vw;
+        aspect-ratio: 1/1;
+        margin-top: 0.5%;
+        margin-bottom: 1%;
     }
 }
 
@@ -82,12 +96,7 @@
     align-items: center;
 }
 
-#logo {
-    width: 5vw;
-    height: 5vw;
-    margin-top: 0.5%;
-    margin-bottom: 1%;
-}
+
 
 #mobile_logo {
     width: 12vw;
@@ -99,8 +108,8 @@
 }
 
 #a_logo {
-    width: 5vw;
-    height: 5vw;
+    width: 100%;
+    aspect-ratio: 1/1;
 }
 
 #mobile_a_logo {

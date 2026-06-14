@@ -7,9 +7,62 @@
     text-align: justify
 }
 
+.ambient_b {
+    width: 8vw;
+    aspect-ratio: 1/1;
+    background-color: transparent;
+    font-size: 100%;
+    border: 1px solid black;
+    border-radius: 0.4rem;
+    text-decoration: solid;
+    cursor: pointer;
+}
+
+#ambients_bs {
+    margin-top: 3vh;
+    display: flex;
+    gap: 1vw
+}
+
+#amb_slide {
+    display: flex;
+    gap: 4vw;
+    width: calc((34vw * 5) + (4vw * 4));
+    transition: left 120ms;
+    left: 0vw;
+}
+
+
+.amb_card {
+    width: 34vw;
+}
+
+@media (min-width: 500px) {
+    .amb_card {
+        width: 27vw;
+    }
+    #amb_slide {
+        width: calc((27vw * 5) + (3vw * 4));
+        gap: 3vw
+    }
+}
+
 @media (min-width: 800px) {
     #ambients_ut {
         flex-direction: row;
+    }
+
+   .ambient_b {
+        width: 3vw; 
+    }
+
+    .amb_card {
+        width: 17vw;
+    }
+
+    #amb_slide {
+        width: calc((17vw * 5) + (2vw * 4));
+        gap: 2vw;
     }
 
 }
@@ -43,14 +96,14 @@
     flex-direction: column;
 }
 
+
+
 #ambients_cards {
     overflow: hidden;
     
 }
 
-.amb_card {
-    width: 17vw;
-}
+
 
 .amb_card_i {
     height: 38vh;
@@ -68,13 +121,6 @@
     -webkit-box-orient: vertical;
 }
 
-#amb_slide {
-    display: flex;
-    gap: 2vw;
-    width: calc((17vw * 5) + (2vw * 4));
-    transition: left 120ms;
-    left: 0vw;
-}
 
 
 
