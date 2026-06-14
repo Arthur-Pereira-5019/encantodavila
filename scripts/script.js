@@ -232,6 +232,12 @@ p_frames.forEach(e => {
     e.addEventListener("click", function () {
         expandImage(1, Number(e.querySelector(".pousada_img").dataset.img_group_order))
     })
+    e.addEventListener("pointerover",function() {
+        e.querySelector("img").style.transform = "scale(1.05)"
+    })
+    e.addEventListener("pointerout",function() {
+        e.querySelector("img").style.transform = "scale(1)"
+    })
 });
 
 loc_frames.forEach(e => {
@@ -240,6 +246,12 @@ loc_frames.forEach(e => {
     e.appendChild(cover)
     e.addEventListener("click", function () {
         expandImage(2, Number(e.querySelector(".pousada_img").dataset.img_group_order))
+    })
+    e.addEventListener("pointerover",function() {
+        e.querySelector("img").style.transform = "scale(1.05)"
+    })
+    e.addEventListener("pointerout",function() {
+        e.querySelector("img").style.transform = "scale(1)"
     })
 });
 
@@ -274,15 +286,12 @@ amb_slide.addEventListener('pointerdown', (e) => {
     lastX = e.clientX;
 });
 
-
-
 document.addEventListener('pointermove', (e) => {
     if (!isDragging) return;
     const dx = e.clientX - lastX;
     lastX = e.clientX;
-
-    const currentLeft = parseFloat(amb_slide.style.left) || 0;
-    amb_slide.style.left = `${currentLeft + dx}px`;
+    l = get_amb_slide_px()
+    amb_slide.style.left = `${l + dx}px`;
 });
 
 
@@ -326,9 +335,24 @@ ambient_lb.addEventListener("click", () => {
 
 function get_amb_slide() {
     let l = amb_slide.style.left
-    l = l.slice(0, l.length - 2)
-    l = pxToVw(l)
-    return l
+    if(l.slice(l.length-2,l.length) == "vw") {
+        return Number(l.slice(0, l.length - 2))
+    } else {
+        l = l.slice(0, l.length - 2)
+        l = pxToVw(l)
+        return l
+    }
+}
+
+function get_amb_slide_px() {
+    let l = amb_slide.style.left
+    if(l.slice(l.length-2,l.length) == "px") {
+        return Number(l.slice(0, l.length - 2))
+    } else {
+        l = l.slice(0, l.length - 2)
+        l = VWToPx(l)
+        return l
+    }
 }
 
 function get_amb_slide_vw() {
@@ -339,6 +363,10 @@ function get_amb_slide_vw() {
 
 function pxToVw(px) {
     return (px * 100) / window.innerWidth;
+}
+
+function VWToPx(vw) {
+    return (vw*window.innerWidth)/100
 }
 
 function pxToPctg(px) {

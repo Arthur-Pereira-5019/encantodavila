@@ -1,10 +1,22 @@
-#inner_box {
+.pou_loc_inner_box {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    gap: 4rem;
+    gap: 4vw;
     align-items: flex-start;
     width: 75vw;
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+
+#localizacao {
+    padding-top: 8vh;
+    min-height: fit-content;
+    padding-bottom: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f6f0f1;
 }
 
 #h_localizacao {
@@ -12,10 +24,16 @@
     font-weight: 400;
 }
 
+.pousada_frame {
+    position: relative;
+    width: 36vw;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+
+
 @media (min-width: 800px) {
-    #inner_box {
-        flex-direction: row;
-    }
 
     #h_apousada {
         font-size: 46px !important;
@@ -24,11 +42,41 @@
     #h_localizacao {
         font-size: 32px !important;
     }
+
+    .pousada_frame {
+        width: 20vw;
+    }
+
+    .pou_loc_inner_box {
+        width: 96vw;
+        margin-left: 4vw;
+        margin-right: 0vw;
+        flex-direction: row;
+
+    }
 }
 
+@media (min-width: 1000px) {
+    .pou_loc_inner_box {
+        width: 90vw;
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+}
 
+@media (min-width: 1200px) {
+    .pousada_frame {
+        width: 16vw;
+    }
 
-#inner_box>div {
+    .pou_loc_inner_box {
+        width: 75vw;
+        margin-left: 15vw;
+        margin-right: 15vw;
+    }
+}
+
+.pou_loc_inner_box>div {
     min-width: 0;
     flex: 1;
 }
@@ -37,16 +85,14 @@
     min-height: fit-content;
     padding-top: 8vh;
     padding-bottom: 8vh;
-    display: flex;
-    align-items: center;
-    justify-content: center
 }
 
 
 #image_side {
     display: flex;
-    gap: 1vh;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1vw;
 }
 
 #image_side img {
@@ -61,9 +107,9 @@
     gap: 1vh
 }
 .pousada_img {
-    border-radius: 1rem;
     width: 24rem;
     height: 100%;
+    transition: transform 1s;
 }
 
 
@@ -90,25 +136,9 @@
     border-radius: 1rem;
 }
 
-.pousada_frame {
-    position: relative;
-}
-
 .pf_cover:hover {
     opacity: 0.27;
 }
-
-#localizacao {
-    padding-top: 8vh;
-    min-height: fit-content;
-    padding-bottom: 8vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f6f0f1;
-}
-
-
 
 #loc_text_side {
     font-size: 16px;
@@ -120,4 +150,8 @@
 
 .loc_frame {
     position: relative;
+    transition: transform 1s;
+    overflow: hidden;
+    border-radius: 1rem;
+
 }

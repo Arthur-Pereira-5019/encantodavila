@@ -6,7 +6,7 @@ ref_1 = document.querySelector("#ref_1").cloneNode(true)
 ref_2.classList.remove("ref")
 ref_1.classList.remove("ref")
 for(let i = 1; i < 32; i++) {
-    n = ref_2.cloneNode(true)
+    const n = ref_2.cloneNode(true)
     n.id = "gallery_"+i
     n.querySelector("img").src="assets/gallery/"+i+".webp"
     n.querySelector("img").dataset.img_group_order= String(i-1)
@@ -15,6 +15,12 @@ for(let i = 1; i < 32; i++) {
     }
     n.addEventListener("click", function () {
         expandImage(3, i-1)
+    })
+    n.addEventListener("pointerover", () => {
+        n.querySelector("img").dataset.selected = "1"
+    })
+    n.addEventListener("pointerout", () => {
+        n.querySelector("img").dataset.selected = "0"
     })
     gallery.appendChild(n)
 }
