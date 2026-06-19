@@ -16,6 +16,7 @@ body {
     width: 100vw;
     overflow-x: hidden;
     height: fit-content;
+    flex-shrink: 0;
 }
 
 img {
@@ -56,6 +57,3 @@ img {
 #acomodacoes {
     height: 1vh;
 }
-
-
-

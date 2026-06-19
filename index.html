@@ -36,407 +36,477 @@
         <img id="img_display_close" src="assets/close-button.png">
         <p id="img_count"></p>
     </div>
-    <div id="header" data-transparent="1" class="follow1">
-        <div id="left_tabs" class="header_side">
-            <button class="button_h" id="button_home"
-                onclick="document.getElementById('home').scrollIntoView({behavior: 'smooth'});">Home
-                <div id="hom_underline" class="header_underline" data-active_underline="1">
-            </button>
-            <button class="button_h" id="button_pousada"
-                onclick="document.getElementById('pousada').scrollIntoView({behavior: 'smooth'});">A pousada
-                <div id="pou_underline" class="header_underline" data-active_underline="0">
-            </button>
-            <button class="button_h" id="button_ambients"
-                onclick="document.getElementById('ambients').scrollIntoView({behavior: 'smooth'});">Ambientes
-                <div id="amb_underline" class="header_underline" data-active_underline="0">
-            </button>
-            <button class="button_h" id="button_acomodacoes"
-                onclick="document.getElementById('acomodacoes').scrollIntoView({behavior: 'smooth'});">Acomodações
-                <div id="aco_underline" class="header_underline" data-active_underline="0">
+    <div id="content">
+        <div id="header" data-transparent="1" class="follow1">
+            <div id="left_tabs" class="header_side">
+                <button class="button_h" id="button_home"
+                    onclick="document.getElementById('home').scrollIntoView({behavior: 'smooth'});">Home
+                    <div id="hom_underline" class="header_underline" data-active_underline="1">
+                </button>
+                <button class="button_h" id="button_pousada"
+                    onclick="document.getElementById('pousada').scrollIntoView({behavior: 'smooth'});">A pousada
+                    <div id="pou_underline" class="header_underline" data-active_underline="0">
+                </button>
+                <button class="button_h" id="button_ambients"
+                    onclick="document.getElementById('ambients').scrollIntoView({behavior: 'smooth'});">Ambientes
+                    <div id="amb_underline" class="header_underline" data-active_underline="0">
+                </button>
+                <button class="button_h" id="button_acomodacoes"
+                    onclick="document.getElementById('acomodacoes').scrollIntoView({behavior: 'smooth'});">Acomodações
+                    <div id="aco_underline" class="header_underline" data-active_underline="0">
 
-            </button>
-        </div>
-        <div id="logo">
-            <img src="assets/logo.svg" id="a_logo">
-        </div>
-        <div id="right_tabs" class="header_side">
-            <button class="button_h" id="button_gastronomia"
-                onclick="document.getElementById('gastronomia').scrollIntoView({behavior: 'smooth'});">Gastronomia
-                <div id="gas_underline" class="header_underline" data-active_underline="0">
-            </button>
-            <button class="button_h" id="button_eventos"
-                onclick="document.getElementById('eventos').scrollIntoView({behavior: 'smooth'});">Eventos
-                <div id="eve_underline" class="header_underline" data-active_underline="0">
-            </button>
-            <button class="button_h" id="button_galeria"
-                onclick="document.getElementById('galeria').scrollIntoView({behavior: 'smooth'});">Galeria
-                <div id="gal_underline" class="header_underline" data-active_underline="0">
-            </button>
-            <button class="button_h" id="button_contatos"
-                onclick="document.getElementById('contatos').scrollIntoView({behavior: 'smooth'});">Contato
-                <div id="con_underline" class="header_underline" data-active_underline="0">
-            </button>
-        </div>
-    </div>
-    <div id="mobile_header">
-        <div id="mobile_logo">
-            <img src="assets/logo_dark.svg" id="mobile_a_logo">
-        </div>
-    </div>
-    <div id="main">
-        <div id="home" class="section">
-            <img src="assets/left_arrow.png" id="home_bg_lb" class="home_bg_b">
-            <img src="assets/right_arrow.png" id="home_bg_rb" class="home_bg_b">
-            <div id="home_slider">
-                <img src="assets/front_1.webp" class="home_bg">
-                <img src="assets/front_2.webp" class="home_bg">
-                <img src="assets/front_3.webp" class="home_bg">
+                </button>
+            </div>
+            <div id="logo">
+                <img src="assets/logo.svg" id="a_logo">
+            </div>
+            <div id="right_tabs" class="header_side">
+                <button class="button_h" id="button_gastronomia"
+                    onclick="document.getElementById('gastronomia').scrollIntoView({behavior: 'smooth'});">Gastronomia
+                    <div id="gas_underline" class="header_underline" data-active_underline="0">
+                </button>
+                <button class="button_h" id="button_eventos"
+                    onclick="document.getElementById('eventos').scrollIntoView({behavior: 'smooth'});">Eventos
+                    <div id="eve_underline" class="header_underline" data-active_underline="0">
+                </button>
+                <button class="button_h" id="button_galeria"
+                    onclick="document.getElementById('galeria').scrollIntoView({behavior: 'smooth'});">Galeria
+                    <div id="gal_underline" class="header_underline" data-active_underline="0">
+                </button>
+                <button class="button_h" id="button_contatos"
+                    onclick="document.getElementById('contatos').scrollIntoView({behavior: 'smooth'});">Contato
+                    <div id="con_underline" class="header_underline" data-active_underline="0">
+                </button>
             </div>
         </div>
-        <div id="pousada" class="section">
-            <div class="pou_loc_inner_box">
-                <div id="text_side" class="default_text_side">
-                    <p id="h_apousada" class="noto"> Pousada Encanto da Vila </p>
-                    <p>A Pousada Encanto da Vila está localizada na Rua Itapiranga, 211, no bairro Velha, em Blumenau.
-                        Sua localização estratégica permite fácil acesso ao centro histórico da cidade e possibilita
-                        chegar a pé ao Parque Vila Germânica, tornando-se uma escolha especialmente conveniente para
-                        quem deseja explorar a cidade e participar de eventos locais.</p>
+        <div id="mobile_header">
+            <div id="mobile_logo">
+                <img src="assets/logo_dark.svg" id="mobile_a_logo">
+            </div>
+            <div id="mobile_tab">
+                <img src="assets/mobile_tab.png" id="mobile_a_tab">
+            </div>
+        </div>
+        <div id="main">
+            <div id="home" class="section">
+                <img src="assets/left_arrow.png" id="home_bg_lb" class="home_bg_b">
+                <img src="assets/right_arrow.png" id="home_bg_rb" class="home_bg_b">
+                <div id="home_slider">
+                    <img src="assets/front_1.webp" class="home_bg">
+                    <img src="assets/front_2.webp" class="home_bg">
+                    <img src="assets/front_3.webp" class="home_bg">
+                </div>
+            </div>
+            <div id="pousada" class="section">
+                <div class="pou_loc_inner_box">
+                    <div id="text_side" class="default_text_side">
+                        <p id="h_apousada" class="noto"> Pousada Encanto da Vila </p>
+                        <p>A Pousada Encanto da Vila está localizada na Rua Itapiranga, 211, no bairro Velha, em
+                            Blumenau.
+                            Sua localização estratégica permite fácil acesso ao centro histórico da cidade e possibilita
+                            chegar a pé ao Parque Vila Germânica, tornando-se uma escolha especialmente conveniente para
+                            quem deseja explorar a cidade e participar de eventos locais.</p>
+                        <br>
+                        <p>Inaugurada oficialmente em 2024, a pousada apresenta uma proposta acolhedora e contemporânea.
+                            O
+                            imóvel passou por recentes reformas e foi cuidadosamente planejado para oferecer uma
+                            experiência
+                            de hospedagem moderna, confortável e funcional.</p>
+                        <br>
+                        <p>A reputação da Pousada Encanto da Vila é altamente positiva. Em avaliações recentes, os
+                            hóspedes
+                            destacam de forma recorrente a limpeza, a organização, o conforto dos quartos e a
+                            cordialidade
+                            dos proprietários e da equipe, fatores que contribuem para uma estadia agradável e
+                            tranquila.<br>
+                            Aliando sossego e praticidade, a pousada oferece Wi-Fi gratuito, estacionamento privativo,
+                            quartos climatizados e uma estrutura adequada para famílias. Além disso, conta com
+                            <b>recepção
+                                das 7h às 19h, check-in das 13h às 19h e check-out das 7h às 11h</b>, atendendo tanto
+                            hóspedes a lazer quanto aqueles que visitam a cidade a negócios ou para participação em
+                            eventos.
+                        </p>
+                    </div>
+                    <div id="image_side" class="img-group-1" data-img_group_cap="3">
+                        <div class="pousada_frame expandable">
+                            <img src="assets/front_2.webp" class="pousada_img" data-img_group_order="0">
+                        </div>
+                        <div class="pousada_frame expandable">
+                            <img src="assets/back1.webp" class="pousada_img" data-img_group_order="1">
+                        </div>
+                        <div class="pousada_frame expandable">
+                            <img src="assets/inside_1.webp" class="pousada_img" data-img_group_order="2">
+                        </div>
+                        <div class="pousada_frame expandable">
+                            <img src="assets/inside_2.webp" class="pousada_img" data-img_group_order="3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="ambients" class="section unselectable">
+                <div id="ambients_container">
+                    <div id="ambients_ut">
+                        <div id="ambients_ut_l">
+                            <p class="noto">Nossos Ambientes</p>
+                        </div>
+                        <div id="ambients_ut_r">
+                            <p>Os ambientes da Pousada Encanto da Vila foram cuidadosamente planejados para proporcionar
+                                uma
+                                experiência acolhedora desde o primeiro contato. Cada espaço comum exibe uma combinação
+                                equilibrada entre estilo contemporâneo e clima caseiro, permitindo que o hóspede se
+                                sinta
+                                confortável e à vontade.</p>
+                        </div>
+                    </div>
+                    <div id="ambients_cards">
+                        <div id="amb_slide" class="slider">
+                            <div class="amb_card">
+                                <p class="amb_card_n">Atendimento</p>
+                                <img class="amb_card_i" src="assets/welcome.webp" draggable="false"></img>
+                                <p class="amb_card_d">O atendimento é, sem dúvida, um dos diferenciais da Pousada
+                                    Encanto da
+                                    Vila. Os anfitriões e colaboradores são conhecidos pela cordialidade, atenção e
+                                    disposição em ajudar, o que cria uma experiência personalizada e acolhedora.</p>
+                            </div>
+                            <div class="amb_card">
+                                <p class="amb_card_n">Localização</p>
+                                <img class="amb_card_i" src="assets/street_view.webp" draggable="false"></img>
+                                <p class="amb_card_d">A localização da pousada é um grande destaque para quem visita
+                                    Blumenau. Situada no bairro Velha, está a poucos minutos de caminhada da Vila
+                                    Germânica
+                                    — epicentro dos principais eventos da cidade, incluindo a tradicional Oktoberfest.
+                                    Essa
+                                    proximidade oferece praticidade para quem deseja participar de festivais, feiras e
+                                    atrações turísticas.</p>
+                            </div>
+                            <div class="amb_card">
+                                <p class="amb_card_n">Sofisticação</p>
+                                <img class="amb_card_i" src="assets/cozinha.webp" draggable="false"></img>
+                                <p class="amb_card_d">A sofisticação da Pousada Encanto da Vila está presente em cada
+                                    detalhe, desde a seleção cuidadosa dos móveis até o acabamento impecável das
+                                    acomodações.</p>
+                            </div>
+                            <div class="amb_card">
+                                <p class="amb_card_n">Conforto</p>
+                                <img class="amb_card_i" src="assets/cama.webp" draggable="false"></img>
+                                <p class="amb_card_d">O conforto é um dos principais pontos fortes da pousada. As
+                                    acomodações contam com climatização, camas de alta qualidade, roupas de cama
+                                    selecionadas e banheiros modernos, garantindo noites tranquilas e renovadoras. Cada
+                                    elemento do quarto foi pensado para atender às necessidades dos hóspedes,
+                                    proporcionando
+                                    funcionalidade e bem-estar.</p>
+                            </div>
+                            <div class="amb_card">
+                                <p class="amb_card_n">Lazer</p>
+                                <img class="amb_card_i" src="assets/mesas.webp" draggable="false"></img>
+                                <p class="amb_card_d">Apesar de não ser um estabelecimento de grande porte, a pousada
+                                    proporciona oportunidades de lazer simples, acolhedoras e bem pensadas.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="ambients_bs">
+                        <button id="ambient_lb" class="ambient_b">&lt;
+                        </button>
+                        <button id="ambient_rb" class="ambient_b">&gt;
+                        </button>
+                    </div>
+                </div>
+
+
+            </div>
+            <div id="acomodacoes" class="section">
+                <div id="acomodacoes_ut">
+                    <p class="noto center" id="acs_headline">Nossas acomodações</p>
+                    <p class="center">Os quartos da Pousada Encanto da Vila são projetados para proporcionar conforto e
+                        praticidade. Todos vêm com ar-condicionado, TV de tela plana, banheiro privativo, e ambiente
+                        preparado para famílias ou grupos</p>
+                </div>
+                <div id="acomodacoes_card_slide">
+                    <div class="acomodacao_card">
+                        <div class="ac_card_imgs">
+                            <div class="ac_card_lb"> </div>
+                            <div class="ac_card_img-slide"></div>
+                            <div class="ac_card_rb"> </div>
+                        </div>
+                        <div class="ac_card_dess">
+                            <h2 class="ac_name"></h2>
+                            <p class="ac_description"></p>
+                            <p>A partir de</p>
+                            <h2 class="ac_price"></h2>
+                            <button class="ac_reserve">RESERVAR</button>
+                        </div>
+                    </div>
+                </div>
+                <p class="center noto" id="comodidades_title">Comodidades</p>
+                <div id="comodidades">
+                    <div id="comodidade_slider">
+                        <div class="comodidade unselectable" id="comodidade_1"">
+                        <img src="" class=" comodidade_i">
+                            <p class="comodidade_d">Estacionamento rotativo</p>
+                        </div>
+                        <div class="comodidade unselectable" id="comodidade_2">
+                            <img src="" class="comodidade_i">
+                            <p class="comodidade_d">Ar condicionado</p>
+                        </div>
+                        <div class="comodidade unselectable" id="comodidade_3">
+                            <img src="" class="comodidade_i">
+                            <p class="comodidade_d">Wi-Fi</p>
+                        </div>
+                        <div class="comodidade unselectable" id="comodidade_4">
+                            <img src="" class="comodidade_i">
+                            <p class="comodidade_d">Frigobar</p>
+                        </div>
+                        <div class="comodidade unselectable" id="comodidade_5">
+                            <img src="" class="comodidade_i">
+                            <p class="comodidade_d">Varanda</p>
+                        </div>
+                        <div class="comodidade unselectable" id="comodidade_6">
+                            <img src="" class="comodidade_i">
+                            <p class="comodidade_d">Área de Jogos</p>
+                        </div>
+                        <div class="comodidade unselectable" id="comodidade_7">
+                            <img src="" class="comodidade_i">
+                            <p class="comodidade_d">Secador de cabelos</p>
+                        </div>
+                        <div class="comodidade unselectable" id="comodidade_8">
+                            <img src="" class="comodidade_i">
+                            <p class="comodidade_d">Café da manhã</p>
+                        </div>
+                    </div>
+                    <div id="comodidades_bs">
+                        <div class="comodidades_lb">
+                        </div>
+                        <div class="comodidades_rb">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="localizacao" class="section">
+                <div class="pou_loc_inner_box">
+                    <div id="loc_text_side" class="default_text_side">
+                        <p id="h_localizacao" class="noto"> Localização privilegiada </p>
+                        <p>A proximidade da Pousada Encanto da Vila com a Vila Germânica é um dos grandes diferenciais
+                            para
+                            quem visita Blumenau. Localizada a poucos minutos de caminhada do complexo, a pousada
+                            oferece
+                            aos hóspedes a comodidade de participar de eventos, feiras e festivais sem enfrentar
+                            trânsito,
+                            longos deslocamentos ou dificuldades com estacionamento. Essa vantagem torna a estadia muito
+                            mais prática, especialmente para quem deseja aproveitar ao máximo cada momento das atrações
+                            da
+                            cidade.</p>
+                        <br>
+                        <p>A Vila Germânica é palco dos eventos mais importantes de Blumenau, como a renomada
+                            Oktoberfest, a
+                            Sommerfest, feiras gastronômicas, festivais culturais e encontros temáticos ao longo de todo
+                            o
+                            ano. Estar tão perto desse centro de entretenimento permite que o hóspede vivencie a energia
+                            e a
+                            cultura da região com facilidade, retornando à pousada rapidamente para descansar ou se
+                            preparar
+                            para novas atividades. </p>
+                    </div>
+                    <div id="image_side" class="img-group-2" data-img_group_cap="3">
+                        <div class="img_line img-group">
+                            <div class="loc_frame expandable">
+                                <img src="assets/vila_germanica.webp" class="pousada_img" data-img_group_order="0">
+                            </div>
+                            <div class="loc_frame expandable">
+                                <img src="assets/varanda_3.jpg" class="pousada_img" data-img_group_order="1">
+                            </div>
+                        </div>
+                        <div class="img_line" id="img_line2">
+                            <div class="loc_frame expandable">
+                                <img src="assets/varanda_2.webp" class="pousada_img" data-img_group_order="2">
+                            </div>
+                            <div class="loc_frame expandable">
+                                <img src="assets/varanda.jpg" class="pousada_img" data-img_group_order="3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sticky_image">
+                <div id="st_im_tint"></div>
+                <p id="st_im_text" class="noto">Onde a tranquilidade encontra a tradição de Blumenau</p>
+                <div id="actual_st_im"></div>
+            </div>
+            <div id="gastronomia" class="section gas_even">
+                <div id="gastronomia_inner_box" class="gas_even_iner_box">
+                    <div id="loc_text_side" class="default_text_side">
+                        <p id="h_localizacao" class="noto"> Gastronomia </p>
+                        <p>A Pousada Encanto da Vila oferece um café da manhã estilo americano incluído na diária, com
+                            frutas frescas e pastelaria fresca ideal para começar o dia antes de explorar Blumenau.</p>
+                        <br>
+                        <p>Para outras refeições, há opções nas redondezas: há restaurantes e confeitarias a poucos
+                            minutos
+                            a pé, o que facilita quem prefere não depender de transporte para comer fora.</p>
+                        <br>
+                        <p>Portanto, embora a pousada não disponha de restaurante próprio estruturado, a combinação de
+                            café
+                            da manhã + boa localização com restaurantes próximos garante praticidade gastronômica aos
+                            hóspedes.</p>
+                    </div>
+                    <div class="gas_even_img_side">
+                        <img src="assets/left_arrow.png" id="gastronomia_im_lb" class="gastronomia_im_b">
+                        <img src="assets/right_arrow.png" id="gastronomia_im_rb" class="gastronomia_im_b">
+                        <div class="gas_even_slider" id="gastronomia_slider">
+                            <img src="assets/food.webp" class="gastronomia_pic">
+                            <img src="assets/food_2.webp" class="gastronomia_pic">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="eventos" class="section gas_even">
+                <div id="eventos_inner_box" class="gas_even_iner_box">
+                    <div class="gas_even_img_side">
+                        <img src="assets/left_arrow.png" id="event_im_lb" class="gastronomia_im_b">
+                        <img src="assets/right_arrow.png" id="event_im_rb" class="gastronomia_im_b">
+                        <div class="gas_even_slider" id="event_slider">
+                            <img src="assets/vila_germanica.webp" class="gastronomia_pic">
+                            <img src="assets/mesas_2.webp" class="gastronomia_pic">
+                        </div>
+                    </div>
+                    <div id="loc_text_side" class="default_text_side">
+                        <p id="h_localizacao" class="noto"> Realize seu Evento </p>
+                        <p>Localização privilegiada da pousada, especialmente pela proximidade com o Parque Vila
+                            Germânica e
+                            o centro de Blumenau, faz dela uma opção interessante para quem deseja organizar eventos
+                            como
+                            pequenas celebrações, encontros familiares ou até casamentos íntimos. A estrutura com
+                            quartos
+                            confortáveis, estacionamento e ambiente acolhedor pode atender bem a convidados.</p>
+                        <p>Além disso, o ambiente interno e externo, com áreas de jardim e espaços aconchegantes,
+                            oferece um
+                            cenário simpático para eventos mais reservados.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="galeria" class="section">
+                <p id="galeria_h" class="noto center">Nossas Fotos</p>
+                <p class="center">Na página da pousada e em sites de reservas é possível encontrar uma galeria de fotos
+                    que
+                    exibe a fachada do imóvel, os quartos, os banheiros, áreas comuns como jardim, e até detalhes como
+                    mobiliário, camas e decoração</p>
+                <div id="gallery" class="img-group-3" data-img_group_cap="32">
+                </div>
+                <p id="gallery_see" class="center noto">Ver mais</p>
+            </div>
+            <div id="contatos" class="section">
+
+            </div>
+            <div id="comentarios" class="section">
+                <p id="comentarios_h" class="noto center">O que dizem sobre nós</p>
+                <div id="comentarios_cards">
+                    <div id="comentario_slider" class="slider unselectable">
+
+                        <div class="comentario comentario1" data-selected="1">
+                            <p class="comentario_txt">Adorei minha estadia! O lugar é exatamente como nas fotos — limpo,
+                                confortável e com tudo o que precisei. A localização é excelente, e a Gabryela e sua
+                                equipe
+                                foram super atenciosos e fáceis de conversar. A proximidade com a Vila Germânica é um
+                                grande
+                                diferencial dessa acomodação. Me senti em casa e com certeza voltaria a me hospedar
+                                aqui!
+                            </p>
+                            <p class="comentario_aut">ALESSANDRA FERREIRA - GOOGLE MAPS</p>
+                        </div>
+                        <div class="comentario comentario2">
+                            <p class="comentario_txt">Ótima pousada. Atendeu bem nosso propósito que era ficar próximo
+                                da
+                                Vila Germânica. O atendimento da Gabi e de seu esposo foi excelente do começo ao fim.
+                                Nos
+                                aguardaram chegar pra mostrar a pousada pessoalmente e explicar os detalhes.
+                            </p>
+                            <p class="comentario_aut">CAIO LUCAS - GOOGLE MAPS</p>
+                        </div>
+                        <div class="comentario comentario3">
+                            <p class="comentario_txt">A pousada é maravilhosa!! O ambiente é acolhedor, limpo e
+                                organizado!
+                                O café da manhã é uma delícia, com muita opção, sem falar dos bolos que são uma delícia
+                                😋
+                            </p>
+                            <p class="comentario_aut">JAQUELINE VAILATI - GOOGLE MAPS</p>
+                        </div>
+                        <div class="comentario comentario4">
+                            <p class="comentario_txt">Maravilhosoooooo!!!!!<br>Ficamos em 4 pessoas em um quarto (1 cama
+                                casal e 2 solteiro) Quarto MEGA aconchegante e confortável (com luzes amarelas e baixas
+                                para
+                                conforto e uma mais forte para iluminar normal mesmo), disponibilizam toalhas,
+                                cobertores,
+                                travesseiros muito limpinhos e cheirosos, além de ar condicionado e uma smart TV.
+                            </p>
+                            <p class="comentario_aut">CAMILA ALVES - GOOGLE MAPS</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="comentario_bs">
+                    <button id="com_lb" class="com_b">&lt;
+                    </button>
+                    <button id="com_rb" class="com_b">&gt;
+                    </button>
+                </div>
+            </div>
+            <div id="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11581.479288073524!2d-49.09095826672188!3d-26.91516465233476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94df1980f9471e1b%3A0xa8054472df2c9d77!2sPousada%20Encanto%20da%20Vila!5e0!3m2!1spt-BR!2sbr!4v1780068807717!5m2!1spt-BR!2sbr"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div id="footer">
+                <div id="footer_logo"><img id="footer_a_logo" src="assets/logo_pink.png"></div>
+                <div>
+                    <p class="noto">Menu</p>
                     <br>
-                    <p>Inaugurada oficialmente em 2024, a pousada apresenta uma proposta acolhedora e contemporânea. O
-                        imóvel passou por recentes reformas e foi cuidadosamente planejado para oferecer uma experiência
-                        de hospedagem moderna, confortável e funcional.</p>
+                    <p onclick="document.getElementById('home').scrollIntoView({behavior: 'smooth'});">Home</p>
+                    <p onclick="document.getElementById('pousada').scrollIntoView({behavior: 'smooth'});">A Pousada</p>
+                    <p onclick="document.getElementById('ambients').scrollIntoView({behavior: 'smooth'});">Ambientes</p>
+                    <p onclick="document.getElementById('acomodacoes').scrollIntoView({behavior: 'smooth'});">
+                        Acomodações
+                    </p>
+                    <p onclick="document.getElementById('gastronomia').scrollIntoView({behavior: 'smooth'});">
+                        Gastronomia
+                    </p>
+                    <p onclick="document.getElementById('eventos').scrollIntoView({behavior: 'smooth'});">Eventos</p>
+                </div>
+                <div id="footer_contatos">
+                    <p class="noto">Contatos</p>
                     <br>
-                    <p>A reputação da Pousada Encanto da Vila é altamente positiva. Em avaliações recentes, os hóspedes
-                        destacam de forma recorrente a limpeza, a organização, o conforto dos quartos e a cordialidade
-                        dos proprietários e da equipe, fatores que contribuem para uma estadia agradável e
-                        tranquila.<br>
-                        Aliando sossego e praticidade, a pousada oferece Wi-Fi gratuito, estacionamento privativo,
-                        quartos climatizados e uma estrutura adequada para famílias. Além disso, conta com <b>recepção
-                            das 7h às 19h, check-in das 13h às 19h e check-out das 7h às 11h</b>, atendendo tanto
-                        hóspedes a lazer quanto aqueles que visitam a cidade a negócios ou para participação em eventos.
+                    <p id="footer_phone">047 920008202</p>
+                    <p id="footer_mail">encantodavilapousada@gmail.com</p>
+                    <p id="footer_location">R. Itapiranga, 211 - Velha, Blumenau -<br id="mobile_break"> SC CEP:
+                        89036-230
                     </p>
                 </div>
-                <div id="image_side" class="img-group-1" data-img_group_cap="3">
-                    <div class="pousada_frame expandable">
-                        <img src="assets/front_2.webp" class="pousada_img" data-img_group_order="0">
-                    </div>
-                    <div class="pousada_frame expandable">
-                        <img src="assets/back1.webp" class="pousada_img" data-img_group_order="1">
-                    </div>
-                    <div class="pousada_frame expandable">
-                        <img src="assets/inside_1.webp" class="pousada_img" data-img_group_order="2">
-                    </div>
-                    <div class="pousada_frame expandable">
-                        <img src="assets/inside_2.webp" class="pousada_img" data-img_group_order="3">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="ambients" class="section unselectable">
-            <div id="ambients_container">
-                <div id="ambients_ut">
-                    <div id="ambients_ut_l">
-                        <p class="noto">Nossos Ambientes</p>
-                    </div>
-                    <div id="ambients_ut_r">
-                        <p>Os ambientes da Pousada Encanto da Vila foram cuidadosamente planejados para proporcionar uma
-                            experiência acolhedora desde o primeiro contato. Cada espaço comum exibe uma combinação
-                            equilibrada entre estilo contemporâneo e clima caseiro, permitindo que o hóspede se sinta
-                            confortável e à vontade.</p>
-                    </div>
-                </div>
-                <div id="ambients_cards">
-                    <div id="amb_slide" class="slider">
-                        <div class="amb_card">
-                            <p class="amb_card_n">Atendimento</p>
-                            <img class="amb_card_i" src="assets/welcome.webp" draggable="false"></img>
-                            <p class="amb_card_d">O atendimento é, sem dúvida, um dos diferenciais da Pousada Encanto da
-                                Vila. Os anfitriões e colaboradores são conhecidos pela cordialidade, atenção e
-                                disposição em ajudar, o que cria uma experiência personalizada e acolhedora.</p>
-                        </div>
-                        <div class="amb_card">
-                            <p class="amb_card_n">Localização</p>
-                            <img class="amb_card_i" src="assets/street_view.webp" draggable="false"></img>
-                            <p class="amb_card_d">A localização da pousada é um grande destaque para quem visita
-                                Blumenau. Situada no bairro Velha, está a poucos minutos de caminhada da Vila Germânica
-                                — epicentro dos principais eventos da cidade, incluindo a tradicional Oktoberfest. Essa
-                                proximidade oferece praticidade para quem deseja participar de festivais, feiras e
-                                atrações turísticas.</p>
-                        </div>
-                        <div class="amb_card">
-                            <p class="amb_card_n">Sofisticação</p>
-                            <img class="amb_card_i" src="assets/cozinha.webp" draggable="false"></img>
-                            <p class="amb_card_d">A sofisticação da Pousada Encanto da Vila está presente em cada
-                                detalhe, desde a seleção cuidadosa dos móveis até o acabamento impecável das
-                                acomodações.</p>
-                        </div>
-                        <div class="amb_card">
-                            <p class="amb_card_n">Conforto</p>
-                            <img class="amb_card_i" src="assets/cama.webp" draggable="false"></img>
-                            <p class="amb_card_d">O conforto é um dos principais pontos fortes da pousada. As
-                                acomodações contam com climatização, camas de alta qualidade, roupas de cama
-                                selecionadas e banheiros modernos, garantindo noites tranquilas e renovadoras. Cada
-                                elemento do quarto foi pensado para atender às necessidades dos hóspedes, proporcionando
-                                funcionalidade e bem-estar.</p>
-                        </div>
-                        <div class="amb_card">
-                            <p class="amb_card_n">Lazer</p>
-                            <img class="amb_card_i" src="assets/mesas.webp" draggable="false"></img>
-                            <p class="amb_card_d">Apesar de não ser um estabelecimento de grande porte, a pousada
-                                proporciona oportunidades de lazer simples, acolhedoras e bem pensadas.</p>
-                        </div>
-                    </div>
-                </div>
-                <div id="ambients_bs">
-                    <button id="ambient_lb" class="ambient_b">&lt;
-                    </button>
-                    <button id="ambient_rb" class="ambient_b">&gt;
-                    </button>
-                </div>
-            </div>
 
-
-        </div>
-        <div id="acomodacoes" class="section">
-            <div id="acomodacoes_ut">
-                <p class="noto center" id="acs_headline">Nossas acomodações</p>
-                <p class="center">Os quartos da Pousada Encanto da Vila são projetados para proporcionar conforto e
-                    praticidade. Todos vêm com ar-condicionado, TV de tela plana, banheiro privativo, e ambiente
-                    preparado para famílias ou grupos</p>
-            </div>
-            <div id="acomodacoes_card_slide">
-                <div class="acomodacao_card">
-                    <div class="ac_card_imgs">
-                        <div class="ac_card_lb"> </div>
-                        <div class="ac_card_img-slide"></div>
-                        <div class="ac_card_rb"> </div>
-                    </div>
-                    <div class="ac_card_dess">
-                        <h2 class="ac_name"></h2>
-                        <p class="ac_description"></p>
-                        <p>A partir de</p>
-                        <h2 class="ac_price"></h2>
-                        <button class="ac_reserve">RESERVAR</button>
-                    </div>
-                </div>
-            </div>
-            <p class="center noto" id="comodidades_title">Comodidades</p>
-            <div id="comodidades">
-                <div id="comodidade_slider">
-                    <div class="comodidade unselectable" id="comodidade_1"">
-                        <img src="" class=" comodidade_i">
-                        <p class="comodidade_d">Estacionamento rotativo</p>
-                    </div>
-                    <div class="comodidade unselectable" id="comodidade_2">
-                        <img src="" class="comodidade_i">
-                        <p class="comodidade_d">Ar condicionado</p>
-                    </div>
-                    <div class="comodidade unselectable" id="comodidade_3">
-                        <img src="" class="comodidade_i">
-                        <p class="comodidade_d">Wi-Fi</p>
-                    </div>
-                    <div class="comodidade unselectable" id="comodidade_4">
-                        <img src="" class="comodidade_i">
-                        <p class="comodidade_d">Frigobar</p>
-                    </div>
-                    <div class="comodidade unselectable" id="comodidade_5">
-                        <img src="" class="comodidade_i">
-                        <p class="comodidade_d">Varanda</p>
-                    </div>
-                    <div class="comodidade unselectable" id="comodidade_6">
-                        <img src="" class="comodidade_i">
-                        <p class="comodidade_d">Área de Jogos</p>
-                    </div>
-                    <div class="comodidade unselectable" id="comodidade_7">
-                        <img src="" class="comodidade_i">
-                        <p class="comodidade_d">Secador de cabelos</p>
-                    </div>
-                    <div class="comodidade unselectable" id="comodidade_8">
-                        <img src="" class="comodidade_i">
-                        <p class="comodidade_d">Café da manhã</p>
-                    </div>
-                </div>
-                <div id="comodidades_bs">
-                    <div class="comodidades_lb">
-                    </div>
-                    <div class="comodidades_rb">
-
-                    </div>
-                </div>
             </div>
         </div>
-        <div id="localizacao" class="section">
-            <div class="pou_loc_inner_box">
-                <div id="loc_text_side" class="default_text_side">
-                    <p id="h_localizacao" class="noto"> Localização privilegiada </p>
-                    <p>A proximidade da Pousada Encanto da Vila com a Vila Germânica é um dos grandes diferenciais para
-                        quem visita Blumenau. Localizada a poucos minutos de caminhada do complexo, a pousada oferece
-                        aos hóspedes a comodidade de participar de eventos, feiras e festivais sem enfrentar trânsito,
-                        longos deslocamentos ou dificuldades com estacionamento. Essa vantagem torna a estadia muito
-                        mais prática, especialmente para quem deseja aproveitar ao máximo cada momento das atrações da
-                        cidade.</p>
-                    <br>
-                    <p>A Vila Germânica é palco dos eventos mais importantes de Blumenau, como a renomada Oktoberfest, a
-                        Sommerfest, feiras gastronômicas, festivais culturais e encontros temáticos ao longo de todo o
-                        ano. Estar tão perto desse centro de entretenimento permite que o hóspede vivencie a energia e a
-                        cultura da região com facilidade, retornando à pousada rapidamente para descansar ou se preparar
-                        para novas atividades. </p>
-                </div>
-                <div id="image_side" class="img-group-2" data-img_group_cap="3">
-                    <div class="img_line img-group">
-                        <div class="loc_frame expandable">
-                            <img src="assets/vila_germanica.webp" class="pousada_img" data-img_group_order="0">
-                        </div>
-                        <div class="loc_frame expandable">
-                            <img src="assets/varanda_3.jpg" class="pousada_img" data-img_group_order="1">
-                        </div>
-                    </div>
-                    <div class="img_line" id="img_line2">
-                        <div class="loc_frame expandable">
-                            <img src="assets/varanda_2.webp" class="pousada_img" data-img_group_order="2">
-                        </div>
-                        <div class="loc_frame expandable">
-                            <img src="assets/varanda.jpg" class="pousada_img" data-img_group_order="3">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="sticky_image">
-            <div id="st_im_tint"></div>
-            <p id="st_im_text" class="noto">Onde a tranquilidade encontra a tradição de Blumenau</p>
-            <div id="actual_st_im"></div>
-        </div>
-        <div id="gastronomia" class="section gas_even">
-            <div id="gastronomia_inner_box" class="gas_even_iner_box">
-                <div id="loc_text_side" class="default_text_side">
-                    <p id="h_localizacao" class="noto"> Gastronomia </p>
-                    <p>A Pousada Encanto da Vila oferece um café da manhã estilo americano incluído na diária, com
-                        frutas frescas e pastelaria fresca ideal para começar o dia antes de explorar Blumenau.</p>
-                    <br>
-                    <p>Para outras refeições, há opções nas redondezas: há restaurantes e confeitarias a poucos minutos
-                        a pé, o que facilita quem prefere não depender de transporte para comer fora.</p>
-                    <br>
-                    <p>Portanto, embora a pousada não disponha de restaurante próprio estruturado, a combinação de café
-                        da manhã + boa localização com restaurantes próximos garante praticidade gastronômica aos
-                        hóspedes.</p>
-                </div>
-                <div class="gas_even_img_side">
-                    <img src="assets/left_arrow.png" id="gastronomia_im_lb" class="gastronomia_im_b">
-                    <img src="assets/right_arrow.png" id="gastronomia_im_rb" class="gastronomia_im_b">
-                    <div class="gas_even_slider" id="gastronomia_slider">
-                        <img src="assets/food.webp" class="gastronomia_pic">
-                        <img src="assets/food_2.webp" class="gastronomia_pic">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="eventos" class="section gas_even">
-            <div id="eventos_inner_box" class="gas_even_iner_box">
-                <div class="gas_even_img_side">
-                    <img src="assets/left_arrow.png" id="event_im_lb" class="gastronomia_im_b">
-                    <img src="assets/right_arrow.png" id="event_im_rb" class="gastronomia_im_b">
-                    <div class="gas_even_slider" id="event_slider">
-                        <img src="assets/vila_germanica.webp" class="gastronomia_pic">
-                        <img src="assets/mesas_2.webp" class="gastronomia_pic">
-                    </div>
-                </div>
-                <div id="loc_text_side" class="default_text_side">
-                    <p id="h_localizacao" class="noto"> Realize seu Evento </p>
-                    <p>Localização privilegiada da pousada, especialmente pela proximidade com o Parque Vila Germânica e
-                        o centro de Blumenau, faz dela uma opção interessante para quem deseja organizar eventos como
-                        pequenas celebrações, encontros familiares ou até casamentos íntimos. A estrutura com quartos
-                        confortáveis, estacionamento e ambiente acolhedor pode atender bem a convidados.</p>
-                    <p>Além disso, o ambiente interno e externo, com áreas de jardim e espaços aconchegantes, oferece um
-                        cenário simpático para eventos mais reservados.</p>
-                </div>
-            </div>
-        </div>
-        <div id="galeria" class="section">
-            <p id="galeria_h" class="noto center">Nossas Fotos</p>
-            <p class="center">Na página da pousada e em sites de reservas é possível encontrar uma galeria de fotos que
-                exibe a fachada do imóvel, os quartos, os banheiros, áreas comuns como jardim, e até detalhes como
-                mobiliário, camas e decoração</p>
-            <div id="gallery" class="img-group-3" data-img_group_cap="32">
-            </div>
-            <p id="gallery_see" class="center noto">Ver mais</p>
-        </div>
-        <div id="contatos" class="section">
-
-        </div>
-        <div id="comentarios" class="section">
-            <p id="comentarios_h" class="noto center">O que dizem sobre nós</p>
-            <div id="comentarios_cards">
-                <div id="comentario_slider" class="slider">
-                    <div class="comentario" id="comentario1">
-                        <p class="comentario_txt">Adorei minha estadia! O lugar é exatamente como nas fotos — limpo,
-                            confortável e com tudo o que precisei. A localização é excelente, e a Gabryela e sua equipe
-                            foram super atenciosos e fáceis de conversar. A proximidade com a Vila Germânica é um grande
-                            diferencial dessa acomodação. Me senti em casa e com certeza voltaria a me hospedar aqui!
-                        </p>
-                        <p class="comentario_aut">ALESSANDRA FERREIRA - GOOGLE MAPS</p>
-                    </div>
-                    <div class="comentario" id="comentario2">
-                        <p class="comentario_txt">Ótima pousada. Atendeu bem nosso propósito que era ficar próximo da
-                            Vila Germânica. O atendimento da Gabi e de seu esposo foi excelente do começo ao fim. Nos
-                            aguardaram chegar pra mostrar a pousada pessoalmente e explicar os detalhes.
-                        </p>
-                        <p class="comentario_aut">CAIO LUCAS - GOOGLE MAPS</p>
-                    </div>
-                    <div class="comentario" id="comentario3">
-                        <p class="comentario_txt">A pousada é maravilhosa!! O ambiente é acolhedor, limpo e organizado!
-                            O café da manhã é uma delícia, com muita opção, sem falar dos bolos que são uma delícia 😋
-                        </p>
-                        <p class="comentario_aut">JAQUELINE VAILATI - GOOGLE MAPS</p>
-                    </div>
-                    <div class="comentario" id="comentario4">
-                        <p class="comentario_txt">Maravilhosoooooo!!!!!<br>Ficamos em 4 pessoas em um quarto (1 cama
-                            casal e 2 solteiro) Quarto MEGA aconchegante e confortável (com luzes amarelas e baixas para
-                            conforto e uma mais forte para iluminar normal mesmo), disponibilizam toalhas, cobertores,
-                            travesseiros muito limpinhos e cheirosos, além de ar condicionado e uma smart TV.
-                        </p>
-                        <p class="comentario_aut">CAMILA ALVES - GOOGLE MAPS</p>
-                    </div>
-                </div>
-            </div>
-            <div id="comentarios_buttons">
-                <id="right_button">
-                    </id>
-                    <id="left_button">
-                        </id>
-            </div>
-        </div>
-        <div id="map">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11581.479288073524!2d-49.09095826672188!3d-26.91516465233476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94df1980f9471e1b%3A0xa8054472df2c9d77!2sPousada%20Encanto%20da%20Vila!5e0!3m2!1spt-BR!2sbr!4v1780068807717!5m2!1spt-BR!2sbr"
-                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        <div id="footer">
-            <div id="footer_logo"><img id="footer_a_logo" src="assets/logo.svg"></div>
-            <div>
-                <p class="noto">Menu</p>
-                <br>
-                <p onclick="document.getElementById('home').scrollIntoView({behavior: 'smooth'});">Home</p>
-                <p onclick="document.getElementById('pousada').scrollIntoView({behavior: 'smooth'});">A Pousada</p>
-                <p onclick="document.getElementById('ambients').scrollIntoView({behavior: 'smooth'});">Ambientes</p>
-                <p onclick="document.getElementById('acomodacoes').scrollIntoView({behavior: 'smooth'});">Acomodações
+        <div id="mobile_menu">
+            <div id="mobile_menu_tt" class="mobile_menu_t">
+                <p onclick="document.getElementById('home').scrollIntoView({behavior: 'smooth'});close_mobile_a_tab()">
+                    Home</p>
+                <p onclick="document.getElementById('pousada').scrollIntoView({behavior: 'smooth'});close_mobile_a_tab()">A Pousada</p>
+                <p onclick="document.getElementById('ambients').scrollIntoView({behavior: 'smooth'});close_mobile_a_tab()">Ambientes</p>
+                <p onclick="document.getElementById('acomodacoes').scrollIntoView({behavior: 'smooth'});close_mobile_a_tab()">
+                    Acomodações
                 </p>
-                <p onclick="document.getElementById('gastronomia').scrollIntoView({behavior: 'smooth'});">Gastronomia
+                <p onclick="document.getElementById('gastronomia').scrollIntoView({behavior: 'smooth'});close_mobile_a_tab()">
+                    Gastronomia
                 </p>
-                <p onclick="document.getElementById('eventos').scrollIntoView({behavior: 'smooth'});">Eventos</p>
+                <p onclick="document.getElementById('eventos').scrollIntoView({behavior: 'smooth'});close_mobile_a_tab()">Eventos</p>
+                <p onclick="document.getElementById('galeria').scrollIntoView({behavior: 'smooth'});close_mobile_a_tab()">Galeria</p>
+                <p onclick="document.getElementById('contato').scrollIntoView({behavior: 'smooth'});close_mobile_a_tab()">Contato</p>
             </div>
-            <div id="footer_contatos">
-                <p class="noto">Contatos</p>
-                <br>
-                <p id="footer_phone">047 920008202</p>
-                <p id="footer_mail">encantodavilapousada@gmail.com</p>
-                <p id="footer_location">R. Itapiranga, 211 - Velha, Blumenau -<br id="mobile_break"> SC CEP: 89036-230
-                </p>
+            <div id="mobile_menu_bt" class="mobile_menu_t">
+                <p id="mobile_menu_mail">047 920008202</p>
+                <p id="mobile_menu_mail">encantodavilapousada@gmail.com</p>
+                <p id="mobile_menu_mail">R. Itapiranga, 211 - Velha, Blumenau - SC CEP: 89036-230</p>
             </div>
 
         </div>
     </div>
+
 
     <img src="assets/whatsapp.png" class="follow2 dbutton" id="whats">
 </body>
@@ -449,6 +519,8 @@
 <script src="scripts/header.js"></script>
 <script src="scripts/script.js"></script>
 <script src="scripts/footer.js"></script>
+<script src="scripts/ambients.js"></script>
+<script src="scripts/comentarios.js"></script>
 
 
 </html>

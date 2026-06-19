@@ -23,6 +23,7 @@ img_display_rb = document.querySelector("#img_display_rb")
 img_display_close = document.querySelector("#img_display_close")
 img_count = document.querySelector("#img_count")
 returnHeight = 0
+let resizeTimer;
 
 const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
 const isAndroid = /Android/.test(navigator.userAgent);
@@ -152,6 +153,18 @@ function startHBGSwitch() {
 }
 startHBGSwitch()
 
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => {
+    dom_reset()
+  }, 150);
+});
+
+function dom_reset() {
+    com_reset()
+    ambients_reset()
+}
+
 function switchgastronomiabg(l) {
     r = gastronomia_slider.style.right
     r = Number(r.slice(0, r.length - 1))
@@ -262,108 +275,33 @@ whatsb.addEventListener('click', function (event) {
     window.location.href = "https://wa.me/5547920008202?text=Mensagem%20enviada%20pelo%20site"
 })
 
-// Header
-
-
-let isDragging = false;
-let lastX;
-gap_px = ""
-gap = 0
-base_px = ""
-base_vw_n = 0
-max_v2 = 0
-slider_vw = 0
-
-function rclc_prop() {
-    gap_px = window.getComputedStyle(amb_slide).gap
-    base_px = window.getComputedStyle(document.querySelector(".amb_card")).width
-    slide_px = window.getComputedStyle(ambient_cards).width
-    slider_vw = pxToVw(Number(slide_px.slice(0,slide_px.length-2)))
-    gap = Math.ceil(pxToVw(Number(gap_px.slice(0,gap_px.length-2))))
-    base_vw_n = Math.ceil(pxToVw(Number(base_px.slice(0,base_px.length-2)))+gap)
-    max_vw = base_vw_n*-(5-Math.floor(slider_vw/base_vw_n))
-}
-
-amb_slide.addEventListener('pointerdown', (e) => {
-    rclc_prop()
-    isDragging = true;
-    lastX = e.clientX;
-});
-
 document.addEventListener('pointermove', (e) => {
-    if (!isDragging) return;
-    const dx = e.clientX - lastX;
-    lastX = e.clientX;
-    l = get_amb_slide_px()
-    amb_slide.style.left = `${l + dx}px`;
+    if (isDraggingAmb) {
+        const dx = e.clientX - lastX;
+        lastX = e.clientX;
+        l = get_amb_slide_px()
+        amb_slide.style.left = `${l + dx}px`;
+    } else if(isDraggingCom) {
+        const dx = e.clientX - lastXCom;
+        lastXCom = e.clientX;
+        l = get_com_slide_px()
+        com_slide.style.left = `${l + dx}px`;
+    }
+
 });
 
 
 
 document.addEventListener('pointerup', () => {
-    if (isDragging) {
-        isDragging = false;
-        let l = get_amb_slide()
-        if (l > 0) {
-            amb_slide.style.left = "0vw"
-        } else if (l < max_vw) {
-            amb_slide.style.left = max_vw+"vw"
-        } else {
-            if (l % (base_vw_n) <= base_vw_n/-2) {
-                amb_slide.style.left = `${Math.floor(l / base_vw_n) * base_vw_n}vw`
-            } else {
-                amb_slide.style.left = `${Math.ceil(l / base_vw_n) * base_vw_n}vw`
-            }
-        }
+    if (isDraggingAmb) {
+        isDraggingAmb = false;
+        ambiente_end_drag()
+    }
+    if (isDraggingCom) {
+        isDraggingCom = false;
+        comentario_end_drag()
     }
 });
-
-ambient_rb.addEventListener("click", () => {
-    rclc_prop()
-    if (!isDragging) {
-        l = get_amb_slide_vw()
-        if (l > max_vw) {
-            amb_slide.style.left = `${l - base_vw_n}vw`
-        }
-    }
-})
-
-ambient_lb.addEventListener("click", () => {
-    if (!isDragging) {
-        l = get_amb_slide_vw()
-        if (l < 0) {
-            amb_slide.style.left = `${(Number(l) + base_vw_n)}vw`
-        }
-    }
-})
-
-function get_amb_slide() {
-    let l = amb_slide.style.left
-    if(l.slice(l.length-2,l.length) == "vw") {
-        return Number(l.slice(0, l.length - 2))
-    } else {
-        l = l.slice(0, l.length - 2)
-        l = pxToVw(l)
-        return l
-    }
-}
-
-function get_amb_slide_px() {
-    let l = amb_slide.style.left
-    if(l.slice(l.length-2,l.length) == "px") {
-        return Number(l.slice(0, l.length - 2))
-    } else {
-        l = l.slice(0, l.length - 2)
-        l = VWToPx(l)
-        return l
-    }
-}
-
-function get_amb_slide_vw() {
-    let l = amb_slide.style.left
-    l = l.slice(0, l.length - 2)
-    return l
-}
 
 function pxToVw(px) {
     return (px * 100) / window.innerWidth;

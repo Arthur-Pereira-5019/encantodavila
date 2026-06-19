@@ -1,8 +1,106 @@
 #comentarios {
-    padding-top: 8vh;
-    padding-bottom: 8vh;
+    padding-top: 6vh;
+    padding-bottom: 4vh;
+    width: 92vw;
+    margin-left: 4vw;
+    margin-right: 4vw;
+    min-height: 80vh;
 }
+
+
 
 #comentarios_h {
     font-size: 34px;
+    padding-bottom: 5vh;
 }
+
+#comentarios_cards {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    min-height: 40vh;
+}
+
+#comentario_slider {
+    display: flex;
+    width: fit-content;
+    gap: 5vw;
+    transition: left 100ms
+}
+
+.com_b {
+    width: 8vw;
+    aspect-ratio: 1/1;
+    background-color: transparent;
+    font-size: 100%;
+    border: 1px solid black;
+    border-radius: 0.4rem;
+    text-decoration: solid;
+    cursor: pointer;
+}
+
+.comentario {
+    width: 70vw;
+}
+
+
+#comentario_bs {
+    margin-top: 6vh;
+    display: flex;
+    gap: 1vw;
+    justify-content: center;
+}
+
+@media (min-width: 800px) {
+    .com_b {
+        width: 2vw;
+    }
+
+    #comentarios {
+        width: 70vw;
+        margin-left: 15vw;
+        margin-right: 15vw;
+        min-height: 60vh;
+        padding-top: 10vh;
+        padding-bottom: 8vh;
+    }
+
+    #comentario_slider {
+        gap: 3vw;
+    }
+
+    .comentario {
+        width: 40vw;
+    }
+
+    #comentario_cards {
+        min-height: auto
+    }
+
+    #comentario_bs {
+    margin-top: 9vh;
+}
+}
+
+
+
+.comentario_txt {
+    text-align: justify;
+    color: gray;
+    font-size: 14px;
+}
+
+.comentario[data-selected="1"]>.comentario_txt {
+    color: black;
+    font-size: 16px;
+}
+
+.comentario_aut {
+    padding-top: 3vh;
+    color: grey;
+    text-align: left;
+    font-size: 12px;
+}
+
+
+

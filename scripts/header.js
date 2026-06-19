@@ -8,6 +8,10 @@ eve_underline = document.querySelector("#eve_underline")
 gal_underline = document.querySelector("#gal_underline")
 con_underline = document.querySelector("#con_underline")
 
+mobile_a_tab = document.querySelector("#mobile_a_tab")
+mobile_menu = document.querySelector("#mobile_menu")
+content = document.querySelector("#content")
+
 button_home = document.querySelector("#button_home")
 button_pousada = document.querySelector("#button_pousada")
 button_ambients = document.querySelector("#button_ambients")
@@ -17,6 +21,16 @@ button_eventos = document.querySelector("#button_eventos")
 button_galeria = document.querySelector("#button_galeria")
 button_contatos = document.querySelector("#button_contatos")
 current_level = -1
+
+mobile_a_tab.addEventListener("click", function () {
+    content.dataset.mobile_menu = "1"
+    mobile_menu.dataset.active = "1"
+})
+
+function close_mobile_a_tab() {
+    content.dataset.mobile_menu = "0"
+    mobile_menu.dataset.active = "0"
+}
 
 window.addEventListener("scroll", function (event) {
     y = window.scrollY
@@ -38,19 +52,19 @@ window.addEventListener("scroll", function (event) {
                 home_bg_rb.style.opacity = 1
             }
         }
-        if(current_level != 0) {
+        if (current_level != 0) {
             switchLevel(0)
             hom_underline.dataset.active_underline = "1"
             button_home.style.fontWeight = "600"
         }
     } else if (y < 1480) {
-        if(current_level != 1) {
+        if (current_level != 1) {
             switchLevel(1)
             pou_underline.dataset.active_underline = "1"
             button_pousada.style.fontWeight = "600"
         }
     } else if (y < 2520) {
-        if(current_level != 2) {
+        if (current_level != 2) {
             switchLevel(2)
             amb_underline.dataset.active_underline = "1"
             button_ambients.style.fontWeight = "600"
@@ -67,7 +81,7 @@ function switchLevel(nl) {
     eve_underline.dataset.active_underline = "0"
     gal_underline.dataset.active_underline = "0"
     con_underline.dataset.active_underline = "0"
-    
+
     button_home.style.fontWeight = "400"
     button_pousada.style.fontWeight = "400"
     button_ambients.style.fontWeight = "400"
