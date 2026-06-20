@@ -162,7 +162,8 @@ window.addEventListener('resize', () => {
 
 function dom_reset() {
     com_reset()
-    ambients_reset()
+    amb_reset()
+    reset_acomodacoes()
 }
 
 function switchgastronomiabg(l) {

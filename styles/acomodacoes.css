@@ -45,3 +45,124 @@
     width: 6vw;
     height: 7vw;
 }
+
+.acomodacao_card {
+    width: 17vw;
+}
+
+#acomodacoes_card_slide {
+    display: flex;
+    align-items: center;
+    gap:6vw
+}
+
+.ac_card_dess {
+    padding: 0.7vw;
+}
+
+.ac_description {
+    font-size: 12px;
+}
+
+.ac_card_apd {
+    font-size: 11px;
+    padding-top: 3vh;
+}
+
+.ac_reserve {
+    background-color: rgb(255, 216, 229);
+    width: 5vw;
+    height: 4vh;
+    border: 1px solid black;
+    border-radius: 0.2rem;
+    transition: background-color 1s, color 1s;
+}
+
+.ac_reserve:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.ac_card_lower_box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ac_card_lower_box_l {
+
+}
+
+.ac_price_prefix {
+    font-weight: 500;
+}
+
+.ac_price {
+    font-weight: 600;
+    font-size: 26px;
+}
+
+.ac_name {
+    font-weight: 600;
+    font-size: 21px;
+    padding-bottom: 1vh;
+}
+
+.ac_card_imgs {
+    position: relative;
+}
+
+.ac_card_b {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.ac_card_rb {
+    right: 0px;
+}
+
+.ac_card_lb {
+    left: 0px
+}
+
+.ac_card_img_slide {
+    display: flex;
+}
+
+.ac_cards {
+    overflow: hidden;
+}
+
+.ac_img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.ac_cards {
+    height: 100%;
+}
+
+.ac_card_img_slide {
+    height: 100%;
+}
+
+.ind_ball {
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0.455);
+    width: 0.25vw;
+    aspect-ratio: 1/1;
+}
+
+.ac_ind {
+    position: absolute;
+    display: flex;
+    left: 50%;
+    bottom: 5%;
+    transform: translateX(-50%);
+    gap: 0.45vh
+}
+
+.ind_ball[data-selected="1"] {
+    background-color: rgb(255, 255, 255);
+}

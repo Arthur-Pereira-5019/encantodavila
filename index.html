@@ -223,17 +223,30 @@
                 </div>
                 <div id="acomodacoes_card_slide">
                     <div class="acomodacao_card">
-                        <div class="ac_card_imgs">
-                            <div class="ac_card_lb"> </div>
-                            <div class="ac_card_img-slide"></div>
-                            <div class="ac_card_rb"> </div>
+                        <div class="ac_card_imgs" id="ac_tripla_card_imgs">
+                            <button class="ac_card_lb ac_card_b" id="ac_tripla_lb">&lt</button>
+                            <div class="ac_cards">
+                                <div class="ac_card_img_slide slide" id="ac_slide_tripla">
+                                </div>
+                            </div>
+                            <div id="ac_tripla_ind" class="ac_ind"></div>
+                            <button class="ac_card_rb ac_card_b" id="ac_tripla_lb">&gt</button>
                         </div>
                         <div class="ac_card_dess">
-                            <h2 class="ac_name"></h2>
-                            <p class="ac_description"></p>
-                            <p>A partir de</p>
-                            <h2 class="ac_price"></h2>
-                            <button class="ac_reserve">RESERVAR</button>
+                            <h2 class="ac_name">Suíte Tripla</h2>
+                            <p class="ac_description">Este quarto triplo climatizado dispõe de banheiro privativo, área
+                                de estar, guarda-roupa e área para refeições ao ar livre. A unidade oferece 2 camas.
+                                Contamos com recepção das 7h às 19h, check-in das 13h às 19h e check-out das 7h às 11h.
+                            </p>
+                            <p class="ac_card_apd">A partir de</p>
+                            <div class="ac_card_lower_box">
+                                <div class="ac_card_lower_box_l">
+                                    <span class="ac_price_prefix">R$</span><span class="ac_price">250.00</span>
+                                </div>
+                                <div class="ac_card_lower_box_r">
+                                    <button class="ac_reserve">RESERVAR</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -486,17 +499,29 @@
             <div id="mobile_menu_tt" class="mobile_menu_t">
                 <p onclick="document.getElementById('home').scrollIntoView({behavior: 'smooth'});close_mobile_a_tab()">
                     Home</p>
-                <p onclick="document.getElementById('pousada').scrollIntoView({behavior: 'smooth'});close_mobile_a_tab()">A Pousada</p>
-                <p onclick="document.getElementById('ambients').scrollIntoView({behavior: 'smooth'});close_mobile_a_tab()">Ambientes</p>
-                <p onclick="document.getElementById('acomodacoes').scrollIntoView({behavior: 'smooth'});close_mobile_a_tab()">
+                <p
+                    onclick="document.getElementById('pousada').scrollIntoView({behavior: 'smooth'});close_mobile_a_tab()">
+                    A Pousada</p>
+                <p
+                    onclick="document.getElementById('ambients').scrollIntoView({behavior: 'smooth'});close_mobile_a_tab()">
+                    Ambientes</p>
+                <p
+                    onclick="document.getElementById('acomodacoes').scrollIntoView({behavior: 'smooth'});close_mobile_a_tab()">
                     Acomodações
                 </p>
-                <p onclick="document.getElementById('gastronomia').scrollIntoView({behavior: 'smooth'});close_mobile_a_tab()">
+                <p
+                    onclick="document.getElementById('gastronomia').scrollIntoView({behavior: 'smooth'});close_mobile_a_tab()">
                     Gastronomia
                 </p>
-                <p onclick="document.getElementById('eventos').scrollIntoView({behavior: 'smooth'});close_mobile_a_tab()">Eventos</p>
-                <p onclick="document.getElementById('galeria').scrollIntoView({behavior: 'smooth'});close_mobile_a_tab()">Galeria</p>
-                <p onclick="document.getElementById('contato').scrollIntoView({behavior: 'smooth'});close_mobile_a_tab()">Contato</p>
+                <p
+                    onclick="document.getElementById('eventos').scrollIntoView({behavior: 'smooth'});close_mobile_a_tab()">
+                    Eventos</p>
+                <p
+                    onclick="document.getElementById('galeria').scrollIntoView({behavior: 'smooth'});close_mobile_a_tab()">
+                    Galeria</p>
+                <p
+                    onclick="document.getElementById('contato').scrollIntoView({behavior: 'smooth'});close_mobile_a_tab()">
+                    Contato</p>
             </div>
             <div id="mobile_menu_bt" class="mobile_menu_t">
                 <p id="mobile_menu_mail">047 920008202</p>
@@ -521,6 +546,7 @@
 <script src="scripts/footer.js"></script>
 <script src="scripts/ambients.js"></script>
 <script src="scripts/comentarios.js"></script>
+<script src="scripts/acomodacoes.js"></script>
 
 
 </html>

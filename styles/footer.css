@@ -54,3 +54,7 @@
 }
 
 }
+
+#footer p:hover {
+    text-decoration: underline;
+}
