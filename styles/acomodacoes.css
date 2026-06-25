@@ -8,16 +8,121 @@
 
 .acomodacao_card {
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.37);
+    width: 52vw;
 }
+
+.ac_card_dess {
+    padding: 0.7vw;
+    height: 35vh;
+    position: relative;
+}
+
+.ac_reserve {
+    background-color: rgb(255, 216, 229);
+    width: 12vw;
+    height: 4vh;
+    border: 1px solid black;
+    border-radius: 0.2rem;
+    transition: background-color 1s, color 1s;
+}
+
+.ac_card_b {
+    background-color: rgba(0, 0, 0, 0.353);
+    border: 0px;
+    border-radius: 0.5rem;
+    width: 2vw;
+    height: 5vh;
+    font-size: 24px;
+    color: white;
+    transition: background-color 700ms;
+    cursor: pointer;
+}
+
+.ac_card_b:hover {
+    background-color: rgba(0, 0, 0, 0.683);
+}
+
+#acomodacao_cards {
+    overflow: hidden;
+    width: 100%;
+    height: fit-content;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+#acomodacoes_card_slide {
+    margin-top: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9vw;
+    width: 120vw;
+}
+
+.ind_ball {
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0.455);
+    width: 1vw;
+    aspect-ratio: 1/1;
+}
+
+@media (min-width: 800px) {
+    .acomodacao_card {
+        width: 33vw;
+    }
+
+    .ind_ball {
+        width: 0.25vw;
+    }
+
+    .ac_card_dess {
+        height: 32vh;
+    }
+
+    #acomodacoes_card_slide {
+        margin-top: 8vh;
+        display: flex;
+        gap: 2vw;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+@media (min-width: 1000px) {
+    .acomodacao_card {
+        width: 28vw;
+    }
+
+    .ac_card_dess {
+        height: 27vh;
+    }
+}
+
+@media (min-width: 1200px) {
+    .acomodacao_card {
+        width: 23vw;
+    }
+
+    .ac_reserve {
+        width: 5vw;
+    }
+
+}
+
+@media (min-width: 1400px) {
+    .acomodacao_card {
+        width: 18vw;
+    }
+
+}
+
 
 #acs_headline {
     font-size: 34px;
     font-weight: 500;
 }
 
-#acomodacoes_card_slide {
-    margin-top: 8vh;
-}
+
 
 #comodidades_title {
     margin-top: 18vh;
@@ -41,24 +146,13 @@
     width: calc((6vw * 12) + (8vw * 11));
 }
 
-#comodidade_slider > div {
+#comodidade_slider>div {
     width: 6vw;
     height: 7vw;
 }
 
-.acomodacao_card {
-    width: 17vw;
-}
 
-#acomodacoes_card_slide {
-    display: flex;
-    align-items: center;
-    gap:6vw
-}
 
-.ac_card_dess {
-    padding: 0.7vw;
-}
 
 .ac_description {
     font-size: 12px;
@@ -67,16 +161,11 @@
 .ac_card_apd {
     font-size: 11px;
     padding-top: 3vh;
+    position: absolute;
+    bottom: 5vh;
 }
 
-.ac_reserve {
-    background-color: rgb(255, 216, 229);
-    width: 5vw;
-    height: 4vh;
-    border: 1px solid black;
-    border-radius: 0.2rem;
-    transition: background-color 1s, color 1s;
-}
+
 
 .ac_reserve:hover {
     background-color: black;
@@ -87,11 +176,11 @@
 .ac_card_lower_box {
     display: flex;
     justify-content: space-between;
+    position: absolute;
+    bottom: 1vh;
+    width: 90%;
 }
 
-.ac_card_lower_box_l {
-
-}
 
 .ac_price_prefix {
     font-weight: 500;
@@ -110,24 +199,30 @@
 
 .ac_card_imgs {
     position: relative;
+    cursor: pointer;
+    overflow: hidden;
 }
 
 .ac_card_b {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 1;
 }
 
 .ac_card_rb {
-    right: 0px;
+    right: -0.3vw
 }
 
 .ac_card_lb {
-    left: 0px
+    left: -0.3vw
 }
 
 .ac_card_img_slide {
     display: flex;
+    left: 0vw;
+    position: relative;
+    transition: left 100ms;
 }
 
 .ac_cards {
@@ -145,13 +240,6 @@
 
 .ac_card_img_slide {
     height: 100%;
-}
-
-.ind_ball {
-    border-radius: 100%;
-    background-color: rgba(255, 255, 255, 0.455);
-    width: 0.25vw;
-    aspect-ratio: 1/1;
 }
 
 .ac_ind {
