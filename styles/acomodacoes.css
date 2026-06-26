@@ -1,14 +1,49 @@
 #acomodacoes {
-    min-height: 120vh;
+    min-height: fit-content;
     margin-right: 15vw;
     margin-left: 15vw;
     margin-top: 12vh;
+    margin-bottom: 12vh;
     width: 70vw;
 }
 
 .acomodacao_card {
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.37);
     width: 52vw;
+}
+
+.ac_selector {
+    border-radius: 100%;
+    background-color: transparent;
+    width: 4vw;
+    aspect-ratio: 1/1;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.ac_selector[data-selected="1"] {
+    background-color: black;
+}
+
+.ac_card_b {
+    background-color: rgba(0, 0, 0, 0.353);
+    border: 0px;
+    border-radius: 0.5rem;
+    width: 5vw;
+    height: 5vh;
+    font-size: 24px;
+    color: white;
+    transition: background-color 700ms;
+    cursor: pointer;
+}
+
+#mobile_ac_selector {
+    padding-top: 4vh;
+    display: flex;
+    flex-direction: row;
+    gap: 4vw;
+    width: 100%;
+    justify-content: center;
 }
 
 .ac_card_dess {
@@ -26,17 +61,7 @@
     transition: background-color 1s, color 1s;
 }
 
-.ac_card_b {
-    background-color: rgba(0, 0, 0, 0.353);
-    border: 0px;
-    border-radius: 0.5rem;
-    width: 2vw;
-    height: 5vh;
-    font-size: 24px;
-    color: white;
-    transition: background-color 700ms;
-    cursor: pointer;
-}
+
 
 .ac_card_b:hover {
     background-color: rgba(0, 0, 0, 0.683);
@@ -46,8 +71,8 @@
     overflow: hidden;
     width: 100%;
     height: fit-content;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
 }
 
 #acomodacoes_card_slide {
@@ -57,6 +82,9 @@
     justify-content: center;
     gap: 9vw;
     width: 120vw;
+    position: relative;
+    transition: left 700ms;
+    left: 0vw
 }
 
 .ind_ball {
@@ -66,7 +94,19 @@
     aspect-ratio: 1/1;
 }
 
+.ac_card_rb {
+    right: -0.7vw
+}
+
+.ac_card_lb {
+    left: -0.7vw
+}
+
 @media (min-width: 800px) {
+    #mobile_ac_selector {
+        display: none;
+    }
+
     .acomodacao_card {
         width: 33vw;
     }
@@ -85,6 +125,18 @@
         gap: 2vw;
         justify-content: center;
         width: 100%;
+    }
+
+    .ac_card_b {
+        width: 2vw;
+    }
+
+    .ac_card_rb {
+        right: -0.3vw
+    }
+
+    .ac_card_lb {
+        left: -0.3vw
     }
 }
 
@@ -125,7 +177,7 @@
 
 
 #comodidades_title {
-    margin-top: 18vh;
+    margin-top: 15vh;
     font-size: 34px;
     font-weight: 500;
 }
@@ -210,13 +262,7 @@
     z-index: 1;
 }
 
-.ac_card_rb {
-    right: -0.3vw
-}
 
-.ac_card_lb {
-    left: -0.3vw
-}
 
 .ac_card_img_slide {
     display: flex;

@@ -17,12 +17,31 @@
     color: white;
 }
 
+
 #footer_a_logo {
-    width: 40%;
+    width: 34%;
     aspect-ratio: 1/1;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+}
+
+
+#insta_pink_img {
+    width: 7%;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    margin-top: 2vh;
+    transition: bottom 700ms;
+    bottom: 0vh;
+}
+
+#insta_pink_img:hover {
+    bottom: 1vh;
 }
 
 #footer > div > p:not(.noto) {

@@ -112,12 +112,13 @@
 
 .amb_card_d {
     color: rgb(85, 85, 85);
-    max-height: 8vh;
+    max-height: 7rem;
     font-size: 14px;
     text-overflow: ellipsis;
     overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
     -webkit-box-orient: vertical;
 }
 

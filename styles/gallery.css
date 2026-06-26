@@ -1,5 +1,7 @@
 #galeria {
     background-color: #f6f0f1;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
 }
 
 #gallery {
@@ -16,7 +18,7 @@
 }
 
 .gallery_frame {
-    width: 14rem;
+    width: 11rem;
     overflow: hidden;
 }
 

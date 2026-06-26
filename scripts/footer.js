@@ -1,4 +1,5 @@
 footer_phone = document.querySelector("#footer_phone")
+insta_pink_img = document.querySelector("#insta_pink_img")
 
 footer_mail = document.querySelector("#footer_mail")
 footer_location = document.querySelector("#footer_location")
@@ -19,4 +20,8 @@ footer_location.addEventListener("click", function () {
     } else {
         window.open(`https://www.google.com/maps/search/?api=1&query=${lat},${lng}`, '_blank');
     }
+})
+
+insta_pink_img.addEventListener("click",function() {
+    window.location.href = "https://www.instagram.com/pousadaencantodavila/"
 })

@@ -4,9 +4,9 @@
     flex-direction: column;
     gap: 4vw;
     align-items: flex-start;
-    width: 75vw;
-    margin-left: 15vw;
-    margin-right: 15vw;
+    width: 84vw;
+    margin-left: 8vw;
+    margin-right: 8vw;
 }
 
 #localizacao {
@@ -19,6 +19,14 @@
     background-color: #f6f0f1;
 }
 
+#image_side {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1vw;
+    justify-content: center;
+}
+
 #h_localizacao {
     font-size: 28px !important;
     font-weight: 400;
@@ -26,7 +34,7 @@
 
 .pousada_frame {
     position: relative;
-    width: 36vw;
+    width: 41vw;
     overflow: hidden;
     border-radius: 1rem;
 }
@@ -88,12 +96,7 @@
 }
 
 
-#image_side {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1vw;
-}
+
 
 #image_side img {
     flex: 1;
