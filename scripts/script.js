@@ -164,6 +164,7 @@ function dom_reset() {
     com_reset()
     amb_reset()
     reset_acomodacoes()
+    recalc_heights()
 }
 
 function switchgastronomiabg(l) {

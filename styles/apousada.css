@@ -28,8 +28,9 @@
 }
 
 #h_localizacao {
-    font-size: 28px !important;
+    font-size: 25px !important;
     font-weight: 400;
+    text-align: center;
 }
 
 .pousada_frame {
@@ -45,6 +46,7 @@
 
     #h_apousada {
         font-size: 46px !important;
+        text-align: auto;
     }
 
     #h_localizacao {

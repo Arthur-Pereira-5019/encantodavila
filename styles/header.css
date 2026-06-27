@@ -17,6 +17,7 @@
 
 .mobile_menu_t p {
     padding-top: 2vh;
+    text-wrap: 2;
 }
 
 #mobile_menu_tt {
@@ -24,7 +25,7 @@
 }
 
 #mobile_menu_bt {
-    padding-top: 30vh;
+    padding-top: 23vh;
 }
 
 #mobile_menu {
@@ -36,6 +37,8 @@
     position: sticky;
     right: 0px;
     top: 0px;
+    z-index: 6;
+    overflow: hidden;
 }
 
 #mobile_menu p {

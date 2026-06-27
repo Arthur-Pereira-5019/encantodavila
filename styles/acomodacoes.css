@@ -1,15 +1,23 @@
+#comodidades {
+    display: none;
+}
+
+#comodidades_title {
+    display: none;
+}
+
 #acomodacoes {
     min-height: fit-content;
-    margin-right: 15vw;
-    margin-left: 15vw;
+    margin-right: 7vw;
+    margin-left: 7vw;
     margin-top: 12vh;
     margin-bottom: 12vh;
-    width: 70vw;
+    width: 86vw;
 }
 
 .acomodacao_card {
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.37);
-    width: 52vw;
+    width: 68vw;
 }
 
 .ac_selector {
@@ -54,7 +62,7 @@
 
 .ac_reserve {
     background-color: rgb(255, 216, 229);
-    width: 12vw;
+    width: fit-content;
     height: 4vh;
     border: 1px solid black;
     border-radius: 0.2rem;
@@ -81,7 +89,7 @@
     align-items: center;
     justify-content: center;
     gap: 9vw;
-    width: 120vw;
+    width: 151vw;
     position: relative;
     transition: left 700ms;
     left: 0vw
@@ -103,6 +111,12 @@
 }
 
 @media (min-width: 800px) {
+    #acomodacoes {
+        margin-right: 15vw;
+        margin-left: 15vw;
+        width: 70vw;
+    }
+
     #mobile_ac_selector {
         display: none;
     }

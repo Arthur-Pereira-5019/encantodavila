@@ -62,7 +62,7 @@ ac_selector_0.addEventListener("click",function() {
     if(ac_selector_0.dataset.selected = "0") {
         ac_selector_0.dataset.selected = "1"
         ac_selector_1.dataset.selected = "0"
-        acomodacoes_card_slide.style.left = "0vw"
+        acomodacoes_card_slide.style.left = "3vw"
     }
 })
 
@@ -70,7 +70,7 @@ ac_selector_1.addEventListener("click",function() {
     if(ac_selector_1.dataset.selected = "0") {
         ac_selector_0.dataset.selected = "0"
         ac_selector_1.dataset.selected = "1"
-        acomodacoes_card_slide.style.left = "-57vw"
+        acomodacoes_card_slide.style.left = "-68vw"
     }
 })
 

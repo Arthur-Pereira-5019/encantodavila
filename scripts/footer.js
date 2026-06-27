@@ -8,6 +8,10 @@ footer_mail.addEventListener("click", function () {
     window.location = "mailto:encantodavilapousada@gmail.com?subject=Gostaria%20de%20falar%20com%a%pousada";
 })
 
+footer_phone.addEventListener("click", function () {
+    window.location = "https://wa.me/5547920008202?text=Mensagem%20enviada%20pelo%20site";
+})
+
 footer_location.addEventListener("click", function () {
     let lat = "-26.9159141"
     let lng = "-49.0865473"
