@@ -139,6 +139,7 @@
 .amb_card_i {
     height: 38vh;
     object-fit: cover;
+    width: 100%;
 }
 
 .amb_card_d {

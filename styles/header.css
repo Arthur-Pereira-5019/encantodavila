@@ -79,8 +79,9 @@
     right: 50px;
     top: 50%;
     transform: translateY(-50%);
-    width: 8vw;
+    width: 7vh;
     aspect-ratio: 1/1;
+    cursor: pointer;
 }
 
 #logo {
@@ -159,7 +160,7 @@
 
 
 #mobile_logo {
-    width: 12vw;
+    width: 8vh;
     aspect-ratio: 1/1;
     margin-right: 4%;
     margin-left: 3.5%;
@@ -173,7 +174,7 @@
 }
 
 #mobile_a_logo {
-    width: 12vw;
+    width: 8vh;
     aspect-ratio: 1/1;
 }
 

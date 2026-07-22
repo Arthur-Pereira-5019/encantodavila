@@ -18,7 +18,7 @@
 }
 
 .gallery_frame {
-    width: 11rem;
+    width: 8rem;
     overflow: hidden;
 }
 
@@ -35,6 +35,12 @@
 
 .gallery_img[data-selected="0"] {
     transform: scale(1);
+}
+
+@media (min-width: 400px) {
+    .gallery_frame {
+        width: 11rem;
+    }
 }
 
 @media (min-width: 600px) {
@@ -64,7 +70,7 @@
 
 @media (min-width: 1000px) {
     .gallery_frame {
-        width: 24rem;
+        width: 21rem;
     }
 
     #gallery {

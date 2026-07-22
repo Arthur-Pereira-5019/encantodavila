@@ -18,7 +18,7 @@
     width: 100%;
     overflow: hidden;
     position: relative;
-    min-height: 40vh;
+    min-height: 56vh
 }
 
 #comentario_slider {
@@ -57,9 +57,9 @@
     }
 
     #comentarios {
-        width: 70vw;
-        margin-left: 15vw;
-        margin-right: 15vw;
+        width: 80vw;
+        margin-left: 10vw;
+        margin-right: 10vw;
         min-height: 60vh;
         padding-top: 10vh;
         padding-bottom: 8vh;
@@ -77,9 +77,21 @@
         min-height: auto
     }
 
+    #comentarios_cards {
+        min-height: 30vw;
+    }
+
     #comentario_bs {
-    margin-top: 9vh;
+        margin-top: 9vh;
+    }
 }
+
+@media (min-width: 1000px) {
+    #comentarios {
+        width: 70vw;
+        margin-left: 15vw;
+        margin-right: 15vw;
+    }
 }
 
 
@@ -101,6 +113,3 @@
     text-align: left;
     font-size: 12px;
 }
-
-
-

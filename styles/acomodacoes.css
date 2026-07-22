@@ -38,7 +38,7 @@
     border: 0px;
     border-radius: 0.5rem;
     width: 5vw;
-    height: 5vh;
+    height: 14vw;
     font-size: 24px;
     color: white;
     transition: background-color 700ms;
@@ -54,15 +54,12 @@
     justify-content: center;
 }
 
-.ac_card_dess {
-    padding: 0.7vw;
-    height: 35vh;
-    position: relative;
-}
+
 
 .ac_reserve {
     background-color: rgb(255, 216, 229);
     width: fit-content;
+    min-height: fit-content;
     height: 4vh;
     border: 1px solid black;
     border-radius: 0.2rem;
@@ -92,13 +89,13 @@
     width: 151vw;
     position: relative;
     transition: left 700ms;
-    left: 0vw
+    left: 3vw
 }
 
 .ind_ball {
     border-radius: 100%;
     background-color: rgba(255, 255, 255, 0.455);
-    width: 1vw;
+    width: 1.25vw;
     aspect-ratio: 1/1;
 }
 
@@ -109,6 +106,43 @@
 .ac_card_lb {
     left: -0.7vw
 }
+
+.ac_card_dess {
+    padding: 0.7vw;
+    height: 340px;
+    position: relative;
+}
+
+@media (min-width: 200px) {
+    .ac_card_dess {
+        height: 340px;
+    }
+}
+
+@media (min-width: 400px) {
+    .ac_card_dess {
+        height: 220px;
+    }
+
+    .ac_card_b {
+        height: 10vw;
+    }
+}
+
+@media (min-width: 600px) {
+    .acomodacao_card {
+        width: 46vw;
+    }
+
+    .ac_card_dess {
+        height: 240px;
+    }
+
+    .ac_card_b {
+        height: 8vw;
+    }
+}
+
 
 @media (min-width: 800px) {
     #acomodacoes {
@@ -126,11 +160,11 @@
     }
 
     .ind_ball {
-        width: 0.25vw;
+        width: 0.5vw;
     }
 
     .ac_card_dess {
-        height: 32vh;
+        height: 250px;
     }
 
     #acomodacoes_card_slide {
@@ -143,6 +177,7 @@
 
     .ac_card_b {
         width: 2vw;
+        height: 5vw;
     }
 
     .ac_card_rb {
@@ -160,8 +195,13 @@
     }
 
     .ac_card_dess {
-        height: 27vh;
+        height: 280px;
     }
+
+    .ac_card_b {
+        height: 4vw;
+    }
+
 }
 
 @media (min-width: 1200px) {
@@ -173,6 +213,14 @@
         width: 5vw;
     }
 
+    .ind_ball {
+        width: 0.25vw;
+    }
+
+    .ac_card_b {
+        height: 3vw;
+    }
+
 }
 
 @media (min-width: 1400px) {
@@ -180,7 +228,13 @@
         width: 18vw;
     }
 
+    .ind_ball {
+        width: 0.25vw;
+    }
+
 }
+
+
 
 
 #acs_headline {
@@ -226,7 +280,6 @@
 
 .ac_card_apd {
     font-size: 11px;
-    padding-top: 3vh;
     position: absolute;
     bottom: 5vh;
 }

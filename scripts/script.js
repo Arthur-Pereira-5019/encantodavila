@@ -22,12 +22,14 @@ img_display_lb = document.querySelector("#img_display_lb")
 img_display_rb = document.querySelector("#img_display_rb")
 img_display_close = document.querySelector("#img_display_close")
 img_count = document.querySelector("#img_count")
+mobile_up_arrow = document.querySelector("#mobile_up_arrow")
+main = document.querySelector("#main")
 returnHeight = 0
 let resizeTimer;
 
 const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
 const isAndroid = /Android/.test(navigator.userAgent);
-    const isMobile = isIOS || isAndroid;
+const isMobile = isIOS || isAndroid;
 
 //Common
 img_display_close.addEventListener("click", function () {
@@ -154,10 +156,10 @@ function startHBGSwitch() {
 startHBGSwitch()
 
 window.addEventListener('resize', () => {
-  clearTimeout(resizeTimer);
-  resizeTimer = setTimeout(() => {
-    dom_reset()
-  }, 150);
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+        dom_reset()
+    }, 150);
 });
 
 function dom_reset() {
@@ -165,6 +167,25 @@ function dom_reset() {
     amb_reset()
     reset_acomodacoes()
     recalc_heights()
+    home_height()
+}
+
+    home_height()
+
+
+function home_height() {
+    mhh = window.getComputedStyle(mobile_header).height
+    hs = pxToVw(number(window.getComputedStyle(home_slider).height)/2)
+    if (mhh != "auto") {
+        mhh = pxToVw(number(mhh))
+        main.style.top = mhh + "vw"
+        home_bg_lb.style.top = hs + "vw"
+        home_bg_rb.style.top = hs + "vw"
+    } else {
+        main.style.top = "0vw"
+        home_bg_lb.style.top = hs+"vw"
+        home_bg_rb.style.top = hs+"vw"
+    }
 }
 
 function switchgastronomiabg(l) {
@@ -240,6 +261,10 @@ function get_homebg_slide() {
     return r
 }
 
+mobile_up_arrow.addEventListener("click", function () {
+    document.getElementById('home').scrollIntoView({ behavior: 'smooth' })
+})
+
 // Pousada
 p_frames.forEach(e => {
     cover = document.createElement("div")
@@ -248,10 +273,10 @@ p_frames.forEach(e => {
     e.addEventListener("click", function () {
         expandImage(1, Number(e.querySelector(".pousada_img").dataset.img_group_order))
     })
-    e.addEventListener("pointerover",function() {
+    e.addEventListener("pointerover", function () {
         e.querySelector("img").style.transform = "scale(1.05)"
     })
-    e.addEventListener("pointerout",function() {
+    e.addEventListener("pointerout", function () {
         e.querySelector("img").style.transform = "scale(1)"
     })
 });
@@ -263,10 +288,10 @@ loc_frames.forEach(e => {
     e.addEventListener("click", function () {
         expandImage(2, Number(e.querySelector(".pousada_img").dataset.img_group_order))
     })
-    e.addEventListener("pointerover",function() {
+    e.addEventListener("pointerover", function () {
         e.querySelector("img").style.transform = "scale(1.05)"
     })
-    e.addEventListener("pointerout",function() {
+    e.addEventListener("pointerout", function () {
         e.querySelector("img").style.transform = "scale(1)"
     })
 });
@@ -283,7 +308,7 @@ document.addEventListener('pointermove', (e) => {
         lastX = e.clientX;
         l = get_amb_slide_px()
         amb_slide.style.left = `${l + dx}px`;
-    } else if(isDraggingCom) {
+    } else if (isDraggingCom) {
         const dx = e.clientX - lastXCom;
         lastXCom = e.clientX;
         l = get_com_slide_px()
@@ -310,10 +335,15 @@ function pxToVw(px) {
 }
 
 function VWToPx(vw) {
-    return (vw*window.innerWidth)/100
+    return (vw * window.innerWidth) / 100
 }
 
 function pxToPctg(px) {
     const viewportHeight = window.innerHeight;
     return (px * 100) / viewportHeight;
+}
+
+function number(px) {
+    px = px.slice(0, px.length - 2)
+    return Number(px)
 }

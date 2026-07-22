@@ -10,6 +10,49 @@ html {
     width: 100vw;
 }
 
+#whats {
+    width: 10vw;
+    aspect-ratio: 1/1;
+    bottom: 5vh;
+    left: 4vh;
+    z-index: 3;
+}
+
+#mobile_up_arrow {
+    border: 1px solid white;
+    background-color: rgba(46, 46, 46, 0.74);
+    width: 30px;
+    height: 30px;
+    display: auto;
+    position: fixed;
+    right: 1vw;
+    z-index: 1;
+    bottom: 1vw;
+    cursor: pointer;
+}
+
+@media (min-width: 600px) {
+    #whats {
+        width: 8vw;
+    }
+}
+
+@media (min-width: 800px) {
+    #whats {
+        width: 9vw;
+    }
+
+    #mobile_up_arrow {
+        display: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    #whats {
+        width: 4vw;
+    }
+}
+
 body {
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
@@ -27,6 +70,7 @@ img {
 #main {
     width: 100%;
     height: fit-content;
+    position: relative;
 }
 
 .section {
@@ -45,15 +89,9 @@ img {
     cursor: pointer;
 }
 
-#whats {
-    width: 6.5vh;
-    height: 6.5vh;
-    bottom: 4vh;
-    left: 4vh;
-    z-index: 3;
-}
 
 
 #acomodacoes {
     height: 1vh;
 }
+
